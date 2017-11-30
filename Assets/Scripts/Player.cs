@@ -6,25 +6,29 @@ public class Boundary
 {
     public float xMin, xMax, zMin, zMax;
 }
+
 public class Player : MonoBehaviour
 {
     public float speed;
     public Boundary boundary;
+    private Rigidbody rb;
 
-}
-
-void FixedUpdate()
-{
-    float moveHorizontal = Input.GetAxis("Horizontal");
-    float moveVertical = Input.GetAxis("Vertical");
-
-    Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-}
-	
-	// Update is called once per frame
-	void Update ()
+    private void Start()
     {
-        var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
-        var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
-	}
+        rb = GetComponent<Rigidbody>();
+    }
+
+    private void FixedUpdate()
+    {
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+
+        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        rb.AddForce(movement * speed);
+
+        rb.position = new Vector3(Mathf.Clamp(rb.position.x, boundary.xMin, boundary.xMax), 0.0f, Mathf.Clamp(rb.position.z, boundary.zMin, boundary.zMax));
+
+
+    }
+
 }

@@ -4,4 +4,19 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Scenes/MainMenu.unity
+    guid: a63dfb47e8e24504c8ffff846dedd588
+  - enabled: 1
+    path: Assets/_Scenes/HistoryButtons.unity
+    guid: d55800003a306cd46ade0d0e8c8f2af8
+  - enabled: 1
+    path: Assets/_Scenes/GeneralHistory.unity
+    guid: 8db9200cf13676d4a999108c850a7325
+  - enabled: 1
+    path: Assets/_Scenes/ReligionText.unity
+    guid: dada116c093b8224e9a0ab18af9e83b5
+  - enabled: 1
+    path: Assets/_Scenes/Mithraeum_01.unity
+    guid: 00000000000000000000000000000000
