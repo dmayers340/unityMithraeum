@@ -76,3 +76,4 @@ public class MouseLook : MonoBehaviour
         return Mathf.Clamp(angle, min, max);
     }
 }
+
