@@ -23,7 +23,20 @@ public class MouseLook : MonoBehaviour
     float rotationX = 0F;
     float rotationY = 0F;
 
+    private Quaternion m_CharacterTargetRot;
+    private Quaternion m_CameraTargetRot;
+
+    private bool m_isInitialized = false;
+
     Quaternion originalRotation;
+
+    void Start()
+    {
+        // Make the rigid body not change rotation
+        if (GetComponent<Rigidbody>())
+            GetComponent<Rigidbody>().freezeRotation = true;
+        originalRotation = transform.localRotation;
+    }
 
     void Update()
     {
@@ -58,15 +71,10 @@ public class MouseLook : MonoBehaviour
             transform.localRotation = originalRotation * yQuaternion;
         }
     }
-
-    void Start()
+    public Quaternion getRotation()
     {
-        // Make the rigid body not change rotation
-        if (GetComponent<Rigidbody>())
-            GetComponent<Rigidbody>().freezeRotation = true;
-        originalRotation = transform.localRotation;
+        return originalRotation;
     }
-
     public static float ClampAngle(float angle, float min, float max)
     {
         if (angle < -360F)

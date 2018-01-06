@@ -6,7 +6,10 @@ public class Player : MonoBehaviour
 {
     public float speed;
     private Rigidbody rb;
-
+    private MouseLook m_MouseLook;
+    /* I want my player to rotate when the camera rotates
+     * Need to get the rotation of the camera and rotate player based on position
+     * */
     void Start()
     {
         rb = GetComponent<Rigidbody>();
