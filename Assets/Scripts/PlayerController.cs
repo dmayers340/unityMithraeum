@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
 
-        originalRotation = m_MouseLook.getRotation();
+       // originalRotation = m_MouseLook.getRotation();
  
     }
 

@@ -232,7 +232,6 @@ PlayerSettings:
     m_Devices:
     - None
     - Oculus
-    - OpenVR
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
   webPlayerTemplate: APPLICATION:Default

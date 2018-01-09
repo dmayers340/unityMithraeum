@@ -10,6 +10,7 @@ public class MouseLook : MonoBehaviour
         MouseX = 1,
         MouseY = 2
     }
+
     public RotationAxes axes = RotationAxes.MouseXAndY;
     public float sensitivityX = 15F;
     public float sensitivityY = 15F;
@@ -29,6 +30,12 @@ public class MouseLook : MonoBehaviour
     private bool m_isInitialized = false;
 
     Quaternion originalRotation;
+
+    public void Init(Transform character, Transform camera)
+    {
+        m_CharacterTargetRot = character.localRotation;
+        m_CameraTargetRot = camera.localRotation;
+    }
 
     void Start()
     {
@@ -71,10 +78,11 @@ public class MouseLook : MonoBehaviour
             transform.localRotation = originalRotation * yQuaternion;
         }
     }
-    public Quaternion getRotation()
+    public Quaternion rotate()
     {
-        return originalRotation;
+        return transform.localRotation;
     }
+
     public static float ClampAngle(float angle, float min, float max)
     {
         if (angle < -360F)
