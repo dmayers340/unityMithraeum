@@ -1,17 +1,19 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameCamera : MonoBehaviour
 {
+    
+	void Update ()
+    {
+        var CharacterRotation = GameCamera.transform.rotation;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        CharacterRotation.x = 0;
+        CharacterRotation.z = 0;
+
+        transform.rotation = CharacterRotation;
 		
 	}
 }
+*/

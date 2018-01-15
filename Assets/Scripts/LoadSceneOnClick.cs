@@ -10,4 +10,9 @@ public void LoadByIndex(int sceneIndex) //setting value in button
     {
         SceneManager.LoadScene(sceneIndex);
     }
+
+public void exitGame()
+    {
+        Application.Quit();
+    }
 }

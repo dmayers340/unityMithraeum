@@ -6,7 +6,6 @@ public class Player : MonoBehaviour
 {
     public float speed;
     private Rigidbody rb;
-    private MouseLook m_MouseLook;
 
     private Quaternion mouseRotate;
     /* I want my player to rotate when the camera rotates
@@ -29,9 +28,7 @@ public class Player : MonoBehaviour
 
         //  Quaternion newRotation = m_MouseLook.getRotation();
         // rb.transform.rotation = newRotation;
-        mouseRotate = m_MouseLook.rotate();
-        print(mouseRotate);
-        rb.transform.localRotation = mouseRotate;
+     
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
         rb.AddForce(-movement * speed);
 

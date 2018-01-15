@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -6070,10 +6070,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "This project is being created as part of a MSc dissertation. \n\nThe projects
-    is testing this application on various platforms \nto see which is the easiest
-    to use, is the most engaging and\ninformative. \n\nIf you have any questions,
-    comments, or concerns please\ncontact: 2067887m@student.gla.ac.uk."
+  m_Text: "This project is interested in prototyping elements of the mithraeum at
+    \nCarrawburgh in order to test if these extra effects enhance the virtual \nreality
+    experience, and if so to what degree. \n\r\nIt seeks to answer the questions below:\n\nDoes
+    the use of multisensory effects in VR create a more realistic \nexperience of
+    a Temple to Mithras? \n\nDoes it enhance user experience and engagement of the
+    application?\n \nDoes the experience seem authentic?  "
 --- !u!222 &2139928436
 CanvasRenderer:
   m_ObjectHideFlags: 0
