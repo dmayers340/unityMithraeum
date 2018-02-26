@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    //look direction as vector normalize as direction vec
+    //Need to figure out where facing movement inside the world--move Vertical and horizontal 
+    //orientation --look at camera and transform based on camera's 
     public float speed;
     private Rigidbody rb;
 
@@ -11,6 +14,8 @@ public class Player : MonoBehaviour
     /* I want my player to rotate when the camera rotates
      * Need to get the rotation of the camera and rotate player based on position
      * */
+    MouseLook mLook; //gets mousLook script ==
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -25,10 +30,9 @@ public class Player : MonoBehaviour
         get x input from camera
         get y input from camera
         */
-
         //  Quaternion newRotation = m_MouseLook.getRotation();
         // rb.transform.rotation = newRotation;
-     
+
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
         rb.AddForce(-movement * speed);
 

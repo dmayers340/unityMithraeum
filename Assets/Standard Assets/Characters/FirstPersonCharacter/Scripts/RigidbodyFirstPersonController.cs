@@ -122,6 +122,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             m_RigidBody = GetComponent<Rigidbody>();
             m_Capsule = GetComponent<CapsuleCollider>();
+            cam = GetComponent<Camera>();
             mouseLook.Init (transform, cam.transform);
         }
 

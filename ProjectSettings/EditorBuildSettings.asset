@@ -29,6 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/AboutPage.unity
     guid: a0ee9af9c7eb6e24e8074006d8960634
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/entireCarrawburgh.unity
     guid: f56062c65a9404f4eb53211450449af5
