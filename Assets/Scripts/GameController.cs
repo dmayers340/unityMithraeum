@@ -19,10 +19,8 @@ public class GameController : MonoBehaviour
                 Debug.Log(Input.GetJoystickNames()[i] + " is moved");
                 Debug.Log(loadedDeviceName);
             }
-            else
-            {
-                i++;
-            }
+            else { 
+}
             i++;
         }
     }
