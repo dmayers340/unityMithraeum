@@ -1,0 +1,202 @@
+fileFormatVersion: 2
+guid: 2ddf2f3cf6742344bbb7b3ddcdf1090d
+timeCreated: 1521146820
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Altar 1
+    100002: altar3
+    100004: altartwo
+    100006: Cylinder001
+    100008: Cylinder003
+    100010: Cylinder004
+    100012: fz001
+    100014: Left Bench
+    100016: Left Bottom Step
+    100018: 'Left Top Step '
+    100020: //RootNode
+    100022: Mithraeum In
+    100024: Mithras
+    100026: PIllar end L Bench
+    100028: Pillar Left Apse
+    100030: Pillar Left Apse 1
+    100032: Pillar Left Nave
+    100034: Pillar RIght Bench
+    100036: Pillar Right Nave
+    100038: Pillar Rihgt Apse
+    100040: Plane001
+    100042: Plane002
+    100044: Plinth
+    100046: Right Bench
+    100048: Right Bottom Step
+    100050: Right Top Step
+    400000: Altar 1
+    400002: altar3
+    400004: altartwo
+    400006: Cylinder001
+    400008: Cylinder003
+    400010: Cylinder004
+    400012: fz001
+    400014: Left Bench
+    400016: Left Bottom Step
+    400018: 'Left Top Step '
+    400020: //RootNode
+    400022: Mithraeum In
+    400024: Mithras
+    400026: PIllar end L Bench
+    400028: Pillar Left Apse
+    400030: Pillar Left Apse 1
+    400032: Pillar Left Nave
+    400034: Pillar RIght Bench
+    400036: Pillar Right Nave
+    400038: Pillar Rihgt Apse
+    400040: Plane001
+    400042: Plane002
+    400044: Plinth
+    400046: Right Bench
+    400048: Right Bottom Step
+    400050: Right Top Step
+    2300000: Altar 1
+    2300002: altar3
+    2300004: Cylinder001
+    2300006: Cylinder003
+    2300008: Cylinder004
+    2300010: fz001
+    2300012: Left Bench
+    2300014: Left Bottom Step
+    2300016: 'Left Top Step '
+    2300018: Mithraeum In
+    2300020: Mithras
+    2300022: PIllar end L Bench
+    2300024: Pillar Left Apse
+    2300026: Pillar Left Apse 1
+    2300028: Pillar Left Nave
+    2300030: Pillar RIght Bench
+    2300032: Pillar Right Nave
+    2300034: Pillar Rihgt Apse
+    2300036: Plane001
+    2300038: Plane002
+    2300040: Plinth
+    2300042: Right Bench
+    2300044: Right Bottom Step
+    2300046: Right Top Step
+    3300000: Altar 1
+    3300002: altar3
+    3300004: Cylinder001
+    3300006: Cylinder003
+    3300008: Cylinder004
+    3300010: fz001
+    3300012: Left Bench
+    3300014: Left Bottom Step
+    3300016: 'Left Top Step '
+    3300018: Mithraeum In
+    3300020: Mithras
+    3300022: PIllar end L Bench
+    3300024: Pillar Left Apse
+    3300026: Pillar Left Apse 1
+    3300028: Pillar Left Nave
+    3300030: Pillar RIght Bench
+    3300032: Pillar Right Nave
+    3300034: Pillar Rihgt Apse
+    3300036: Plane001
+    3300038: Plane002
+    3300040: Plinth
+    3300042: Right Bench
+    3300044: Right Bottom Step
+    3300046: Right Top Step
+    4300000: altar3
+    4300002: Altar 1
+    4300004: Pillar Rihgt Apse
+    4300006: Pillar Left Apse
+    4300008: Pillar RIght Bench
+    4300010: Pillar Right Nave
+    4300012: Pillar Left Nave
+    4300014: Pillar Left Apse
+    4300016: fz001
+    4300018: Cylinder004
+    4300020: Cylinder001
+    4300022: Cylinder003
+    4300024: Plinth
+    4300026: Mithras
+    4300028: PIllar end L Bench
+    4300030: Right Bench
+    4300032: Right Top Step
+    4300034: Right Bottom Step
+    4300036: 'Left Top Step '
+    4300038: Left Bottom Step
+    4300040: Left Bench
+    4300042: Mithraeum In
+    4300044: Plane001
+    4300046: Plane002
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
