@@ -27,9 +27,9 @@ public class GameController : MonoBehaviour
 
     IEnumerator LoadDevice(string newDevice)
     {
-        VRSettings.LoadDeviceByName(newDevice); //XRSettings in more recent editions
+        UnityEngine.XR.XRSettings.LoadDeviceByName(newDevice); //XRSettings in more recent editions
         yield return null;
-        VRSettings.enabled = true;
+        UnityEngine.XR.XRSettings.enabled = true;
     }
     void Update ()
     {

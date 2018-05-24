@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: f7d75d848975d324f9444d3613d7a7c0
-timeCreated: 1515074404
+guid: d441fd3954b342143a687b57439494e7
+timeCreated: 1524253575
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,8 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Box017
-    9500000: //RootNode
+    4300000: Altar 002
   materials:
     importMaterials: 1
     materialName: 0
@@ -75,7 +74,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

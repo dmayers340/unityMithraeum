@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     /* I want my player to rotate when the camera rotates
      * Need to get the rotation of the camera and rotate player based on position
      * */
-    MouseLook mLook; //gets mousLook script ==
+   // MouseLook mLook; //gets mousLook script ==
 
     void Start()
     {

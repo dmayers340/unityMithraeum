@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿/* 
+ * using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -76,3 +77,4 @@ public class MouseLook : MonoBehaviour
         return Mathf.Clamp(angle, min, max);
     }
 }
+*/
