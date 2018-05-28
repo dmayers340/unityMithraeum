@@ -1,0 +1,708 @@
+fileFormatVersion: 2
+guid: 9fc9d755ca8080e41ae25cd52a4503c9
+timeCreated: 1499093116
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: 12'6 from Mithraeum is wel
+    100002: 12'6 from Mithraeum is wel001
+    100004: 12'6 from Mithraeum is wel002
+    100006: Altar
+    100008: Altar001
+    100010: Altar002
+    100012: Barracks
+    100014: Barracks007
+    100016: Barracks008
+    100018: Barracks009
+    100020: Barracks010
+    100022: Barracks011
+    100024: Barracks012
+    100026: Barracks013
+    100028: Barracks014
+    100030: Barracks015
+    100032: Barracks016
+    100034: Barracks017
+    100036: Barracks018
+    100038: Barracks019
+    100040: Barracks020
+    100042: Barracks021
+    100044: Barracks022
+    100046: Barracks2
+    100048: Bathhouse
+    100050: Bathhouse001
+    100052: Bathhouse002
+    100054: Box003
+    100056: Box004
+    100058: Camera001
+    100060: Camera001.Target
+    100062: Camera002
+    100064: Camera002.Target
+    100066: Camera003
+    100068: Camera003.Target
+    100070: Camera004
+    100072: Camera004.Target
+    100074: Camera005
+    100076: Camera005.Target
+    100078: Camera006
+    100080: Camera006.Target
+    100082: //RootNode
+    100084: Cylinder001
+    100086: Cylinder002
+    100088: East Wall
+    100090: East Wall001
+    100092: East Wall002
+    100094: Granary
+    100096: Granary001
+    100098: Granary002
+    100100: Head001
+    100102: HQ
+    100104: HQ001
+    100106: HQ002
+    100108: man
+    100110: man001
+    100112: Mithraeum Black Plane
+    100114: Mithraeum Black plane
+    100116: Mithraeum Black Plane bottom
+    100118: Mithraeum Black Plane bottom001
+    100120: Mithraeum Black Plane001
+    100122: Mithraeum Black plane001
+    100124: Mithraeum Black plane002
+    100126: Mithraeum I
+    100128: Mithraeum I001
+    100130: Mithraeum I002
+    100132: Mithraeum Roof
+    100134: Mithraeum Roof001
+    100136: Mithraeum Roof002
+    100138: new
+    100140: new001
+    100142: North Wall
+    100144: North Wall001
+    100146: North Wall002
+    100148: Nymphaeum Well
+    100150: Nymphaeum Well003
+    100152: Nymphaeum Well004
+    100154: Nymphaeum Well005
+    100156: Nymphaeum Well006
+    100158: Nymphaeum Well2
+    100160: OutsideWall_Shrien
+    100162: OutsideWall_Shrien001
+    100164: OutsideWall_Shrien002
+    100166: Part of Curtain Wall 002
+    100168: Part of Curtain Wall 003
+    100170: part of curtain wall 005
+    100172: part of curtain wall 006
+    100174: part of curtain wall 007
+    100176: part of curtain wall 008
+    100178: part of curtain wall 009
+    100180: part of curtain wall 010
+    100182: part of curtain wall 011
+    100184: part of curtain wall 012
+    100186: part of curtain wall 013
+    100188: part of curtain wall 014
+    100190: part of curtain wall 015
+    100192: Part of Curtain Wall 1
+    100194: part of curtain wall 4
+    100196: Part of curtain wall004
+    100198: Part of curtain wall005
+    100200: Part of curtain wall006
+    100202: Part of curtain wall007
+    100204: Part of curtain wall008
+    100206: Part of curtain wall009
+    100208: Part of curtain wall010
+    100210: Part of curtain wall011
+    100212: Part of curtain wall012
+    100214: Part of curtain wall013
+    100216: Part of curtain wall2
+    100218: Part of curtain wall3
+    100220: plane
+    100222: plane001
+    100224: Plane004
+    100226: Plane005
+    100228: Plane006
+    100230: Plane007
+    100232: Plane008
+    100234: River
+    100236: River001
+    100238: River002
+    100240: Shrine Bit
+    100242: Shrine Bit001
+    100244: Shrine Bit002
+    100246: Sky001
+    100248: Sky002
+    100250: Skydome
+    100252: South Wall
+    100254: Sphere001
+    100256: Sphere002
+    100258: Spot001
+    100260: Spot001.Target
+    100262: Spot002
+    100264: Spot002.Target
+    100266: west wall
+    100268: west wall001
+    100270: west wall002
+    100272: z
+    100274: z001
+    100276: z002
+    400000: 12'6 from Mithraeum is wel
+    400002: 12'6 from Mithraeum is wel001
+    400004: 12'6 from Mithraeum is wel002
+    400006: Altar
+    400008: Altar001
+    400010: Altar002
+    400012: Barracks
+    400014: Barracks007
+    400016: Barracks008
+    400018: Barracks009
+    400020: Barracks010
+    400022: Barracks011
+    400024: Barracks012
+    400026: Barracks013
+    400028: Barracks014
+    400030: Barracks015
+    400032: Barracks016
+    400034: Barracks017
+    400036: Barracks018
+    400038: Barracks019
+    400040: Barracks020
+    400042: Barracks021
+    400044: Barracks022
+    400046: Barracks2
+    400048: Bathhouse
+    400050: Bathhouse001
+    400052: Bathhouse002
+    400054: Box003
+    400056: Box004
+    400058: Camera001
+    400060: Camera001.Target
+    400062: Camera002
+    400064: Camera002.Target
+    400066: Camera003
+    400068: Camera003.Target
+    400070: Camera004
+    400072: Camera004.Target
+    400074: Camera005
+    400076: Camera005.Target
+    400078: Camera006
+    400080: Camera006.Target
+    400082: //RootNode
+    400084: Cylinder001
+    400086: Cylinder002
+    400088: East Wall
+    400090: East Wall001
+    400092: East Wall002
+    400094: Granary
+    400096: Granary001
+    400098: Granary002
+    400100: Head001
+    400102: HQ
+    400104: HQ001
+    400106: HQ002
+    400108: man
+    400110: man001
+    400112: Mithraeum Black Plane
+    400114: Mithraeum Black plane
+    400116: Mithraeum Black Plane bottom
+    400118: Mithraeum Black Plane bottom001
+    400120: Mithraeum Black Plane001
+    400122: Mithraeum Black plane001
+    400124: Mithraeum Black plane002
+    400126: Mithraeum I
+    400128: Mithraeum I001
+    400130: Mithraeum I002
+    400132: Mithraeum Roof
+    400134: Mithraeum Roof001
+    400136: Mithraeum Roof002
+    400138: new
+    400140: new001
+    400142: North Wall
+    400144: North Wall001
+    400146: North Wall002
+    400148: Nymphaeum Well
+    400150: Nymphaeum Well003
+    400152: Nymphaeum Well004
+    400154: Nymphaeum Well005
+    400156: Nymphaeum Well006
+    400158: Nymphaeum Well2
+    400160: OutsideWall_Shrien
+    400162: OutsideWall_Shrien001
+    400164: OutsideWall_Shrien002
+    400166: Part of Curtain Wall 002
+    400168: Part of Curtain Wall 003
+    400170: part of curtain wall 005
+    400172: part of curtain wall 006
+    400174: part of curtain wall 007
+    400176: part of curtain wall 008
+    400178: part of curtain wall 009
+    400180: part of curtain wall 010
+    400182: part of curtain wall 011
+    400184: part of curtain wall 012
+    400186: part of curtain wall 013
+    400188: part of curtain wall 014
+    400190: part of curtain wall 015
+    400192: Part of Curtain Wall 1
+    400194: part of curtain wall 4
+    400196: Part of curtain wall004
+    400198: Part of curtain wall005
+    400200: Part of curtain wall006
+    400202: Part of curtain wall007
+    400204: Part of curtain wall008
+    400206: Part of curtain wall009
+    400208: Part of curtain wall010
+    400210: Part of curtain wall011
+    400212: Part of curtain wall012
+    400214: Part of curtain wall013
+    400216: Part of curtain wall2
+    400218: Part of curtain wall3
+    400220: plane
+    400222: plane001
+    400224: Plane004
+    400226: Plane005
+    400228: Plane006
+    400230: Plane007
+    400232: Plane008
+    400234: River
+    400236: River001
+    400238: River002
+    400240: Shrine Bit
+    400242: Shrine Bit001
+    400244: Shrine Bit002
+    400246: Sky001
+    400248: Sky002
+    400250: Skydome
+    400252: South Wall
+    400254: Sphere001
+    400256: Sphere002
+    400258: Spot001
+    400260: Spot001.Target
+    400262: Spot002
+    400264: Spot002.Target
+    400266: west wall
+    400268: west wall001
+    400270: west wall002
+    400272: z
+    400274: z001
+    400276: z002
+    2300000: 12'6 from Mithraeum is wel
+    2300002: 12'6 from Mithraeum is wel001
+    2300004: 12'6 from Mithraeum is wel002
+    2300006: Altar
+    2300008: Altar001
+    2300010: Altar002
+    2300012: Barracks
+    2300014: Barracks007
+    2300016: Barracks008
+    2300018: Barracks009
+    2300020: Barracks010
+    2300022: Barracks011
+    2300024: Barracks012
+    2300026: Barracks013
+    2300028: Barracks014
+    2300030: Barracks015
+    2300032: Barracks016
+    2300034: Barracks017
+    2300036: Barracks018
+    2300038: Barracks019
+    2300040: Barracks020
+    2300042: Barracks021
+    2300044: Barracks022
+    2300046: Barracks2
+    2300048: Bathhouse
+    2300050: Bathhouse001
+    2300052: Bathhouse002
+    2300054: Box003
+    2300056: Box004
+    2300058: Cylinder001
+    2300060: Cylinder002
+    2300062: East Wall
+    2300064: East Wall001
+    2300066: East Wall002
+    2300068: Granary
+    2300070: Granary001
+    2300072: Granary002
+    2300074: Head001
+    2300076: HQ
+    2300078: HQ001
+    2300080: HQ002
+    2300082: man
+    2300084: man001
+    2300086: Mithraeum Black Plane
+    2300088: Mithraeum Black plane
+    2300090: Mithraeum Black Plane bottom
+    2300092: Mithraeum Black Plane bottom001
+    2300094: Mithraeum Black Plane001
+    2300096: Mithraeum Black plane001
+    2300098: Mithraeum Black plane002
+    2300100: Mithraeum I
+    2300102: Mithraeum I001
+    2300104: Mithraeum I002
+    2300106: Mithraeum Roof
+    2300108: Mithraeum Roof001
+    2300110: Mithraeum Roof002
+    2300112: new
+    2300114: new001
+    2300116: North Wall
+    2300118: North Wall001
+    2300120: North Wall002
+    2300122: Nymphaeum Well
+    2300124: Nymphaeum Well003
+    2300126: Nymphaeum Well004
+    2300128: Nymphaeum Well005
+    2300130: Nymphaeum Well006
+    2300132: Nymphaeum Well2
+    2300134: OutsideWall_Shrien
+    2300136: OutsideWall_Shrien001
+    2300138: OutsideWall_Shrien002
+    2300140: Part of Curtain Wall 002
+    2300142: Part of Curtain Wall 003
+    2300144: part of curtain wall 005
+    2300146: part of curtain wall 006
+    2300148: part of curtain wall 007
+    2300150: part of curtain wall 008
+    2300152: part of curtain wall 009
+    2300154: part of curtain wall 010
+    2300156: part of curtain wall 011
+    2300158: part of curtain wall 012
+    2300160: part of curtain wall 013
+    2300162: part of curtain wall 014
+    2300164: part of curtain wall 015
+    2300166: Part of Curtain Wall 1
+    2300168: part of curtain wall 4
+    2300170: Part of curtain wall004
+    2300172: Part of curtain wall005
+    2300174: Part of curtain wall006
+    2300176: Part of curtain wall007
+    2300178: Part of curtain wall008
+    2300180: Part of curtain wall009
+    2300182: Part of curtain wall010
+    2300184: Part of curtain wall011
+    2300186: Part of curtain wall012
+    2300188: Part of curtain wall013
+    2300190: Part of curtain wall2
+    2300192: Part of curtain wall3
+    2300194: plane
+    2300196: plane001
+    2300198: Plane004
+    2300200: Plane005
+    2300202: Plane006
+    2300204: Plane007
+    2300206: Plane008
+    2300208: River
+    2300210: River001
+    2300212: River002
+    2300214: Shrine Bit
+    2300216: Shrine Bit001
+    2300218: Shrine Bit002
+    2300220: Skydome
+    2300222: South Wall
+    2300224: Sphere001
+    2300226: Sphere002
+    2300228: west wall
+    2300230: west wall001
+    2300232: west wall002
+    3300000: 12'6 from Mithraeum is wel
+    3300002: 12'6 from Mithraeum is wel001
+    3300004: 12'6 from Mithraeum is wel002
+    3300006: Altar
+    3300008: Altar001
+    3300010: Altar002
+    3300012: Barracks
+    3300014: Barracks007
+    3300016: Barracks008
+    3300018: Barracks009
+    3300020: Barracks010
+    3300022: Barracks011
+    3300024: Barracks012
+    3300026: Barracks013
+    3300028: Barracks014
+    3300030: Barracks015
+    3300032: Barracks016
+    3300034: Barracks017
+    3300036: Barracks018
+    3300038: Barracks019
+    3300040: Barracks020
+    3300042: Barracks021
+    3300044: Barracks022
+    3300046: Barracks2
+    3300048: Bathhouse
+    3300050: Bathhouse001
+    3300052: Bathhouse002
+    3300054: Box003
+    3300056: Box004
+    3300058: Cylinder001
+    3300060: Cylinder002
+    3300062: East Wall
+    3300064: East Wall001
+    3300066: East Wall002
+    3300068: Granary
+    3300070: Granary001
+    3300072: Granary002
+    3300074: Head001
+    3300076: HQ
+    3300078: HQ001
+    3300080: HQ002
+    3300082: man
+    3300084: man001
+    3300086: Mithraeum Black Plane
+    3300088: Mithraeum Black plane
+    3300090: Mithraeum Black Plane bottom
+    3300092: Mithraeum Black Plane bottom001
+    3300094: Mithraeum Black Plane001
+    3300096: Mithraeum Black plane001
+    3300098: Mithraeum Black plane002
+    3300100: Mithraeum I
+    3300102: Mithraeum I001
+    3300104: Mithraeum I002
+    3300106: Mithraeum Roof
+    3300108: Mithraeum Roof001
+    3300110: Mithraeum Roof002
+    3300112: new
+    3300114: new001
+    3300116: North Wall
+    3300118: North Wall001
+    3300120: North Wall002
+    3300122: Nymphaeum Well
+    3300124: Nymphaeum Well003
+    3300126: Nymphaeum Well004
+    3300128: Nymphaeum Well005
+    3300130: Nymphaeum Well006
+    3300132: Nymphaeum Well2
+    3300134: OutsideWall_Shrien
+    3300136: OutsideWall_Shrien001
+    3300138: OutsideWall_Shrien002
+    3300140: Part of Curtain Wall 002
+    3300142: Part of Curtain Wall 003
+    3300144: part of curtain wall 005
+    3300146: part of curtain wall 006
+    3300148: part of curtain wall 007
+    3300150: part of curtain wall 008
+    3300152: part of curtain wall 009
+    3300154: part of curtain wall 010
+    3300156: part of curtain wall 011
+    3300158: part of curtain wall 012
+    3300160: part of curtain wall 013
+    3300162: part of curtain wall 014
+    3300164: part of curtain wall 015
+    3300166: Part of Curtain Wall 1
+    3300168: part of curtain wall 4
+    3300170: Part of curtain wall004
+    3300172: Part of curtain wall005
+    3300174: Part of curtain wall006
+    3300176: Part of curtain wall007
+    3300178: Part of curtain wall008
+    3300180: Part of curtain wall009
+    3300182: Part of curtain wall010
+    3300184: Part of curtain wall011
+    3300186: Part of curtain wall012
+    3300188: Part of curtain wall013
+    3300190: Part of curtain wall2
+    3300192: Part of curtain wall3
+    3300194: plane
+    3300196: plane001
+    3300198: Plane004
+    3300200: Plane005
+    3300202: Plane006
+    3300204: Plane007
+    3300206: Plane008
+    3300208: River
+    3300210: River001
+    3300212: River002
+    3300214: Shrine Bit
+    3300216: Shrine Bit001
+    3300218: Shrine Bit002
+    3300220: Skydome
+    3300222: South Wall
+    3300224: Sphere001
+    3300226: Sphere002
+    3300228: west wall
+    3300230: west wall001
+    3300232: west wall002
+    4300000: Shrine Bit
+    4300002: OutsideWall_Shrien
+    4300004: Mithraeum I
+    4300006: Mithraeum Roof
+    4300008: River
+    4300010: 12'6 from Mithraeum is wel
+    4300012: Altar
+    4300014: Bathhouse
+    4300016: South Wall
+    4300018: East Wall
+    4300020: Plane004
+    4300022: Part of Curtain Wall 1
+    4300024: Part of curtain wall2
+    4300026: Part of curtain wall3
+    4300028: part of curtain wall 4
+    4300030: west wall
+    4300032: North Wall
+    4300034: Sphere001
+    4300036: Mithraeum Black Plane bottom
+    4300038: Mithraeum Black Plane
+    4300040: Skydome
+    4300042: HQ
+    4300044: Mithraeum Black plane
+    4300046: man
+    4300048: Nymphaeum Well2
+    4300050: Nymphaeum Well
+    4300052: Barracks
+    4300054: Barracks2
+    4300056: Barracks007
+    4300058: Barracks008
+    4300060: Barracks009
+    4300062: Barracks010
+    4300064: Granary
+    4300066: part of curtain wall 005
+    4300068: part of curtain wall 006
+    4300070: Part of curtain wall004
+    4300072: Part of curtain wall005
+    4300074: new
+    4300076: North Wall001
+    4300078: Mithraeum Black Plane bottom001
+    4300080: Mithraeum Black Plane001
+    4300082: Mithraeum Black plane001
+    4300084: HQ001
+    4300086: Head001
+    4300088: Granary001
+    4300090: Bathhouse001
+    4300092: Barracks011
+    4300094: Barracks012
+    4300096: Barracks013
+    4300098: Barracks014
+    4300100: Barracks015
+    4300102: Barracks016
+    4300104: west wall001
+    4300106: Shrine Bit001
+    4300108: River001
+    4300110: plane
+    4300112: Part of curtain wall006
+    4300114: Part of curtain wall007
+    4300116: Part of curtain wall008
+    4300118: Part of curtain wall009
+    4300120: part of curtain wall 007
+    4300122: part of curtain wall 008
+    4300124: part of curtain wall 009
+    4300126: Part of Curtain Wall 002
+    4300128: OutsideWall_Shrien001
+    4300130: Nymphaeum Well003
+    4300132: Nymphaeum Well004
+    4300134: Mithraeum Roof001
+    4300136: Mithraeum I001
+    4300138: East Wall001
+    4300140: Altar001
+    4300142: 12'6 from Mithraeum is wel001
+    4300144: Box003
+    4300146: Cylinder001
+    4300148: Mithraeum Black plane002
+    4300150: 12'6 from Mithraeum is wel002
+    4300152: Altar002
+    4300154: Barracks017
+    4300156: Barracks018
+    4300158: Barracks019
+    4300160: Barracks020
+    4300162: Barracks021
+    4300164: Barracks022
+    4300166: Bathhouse002
+    4300168: Cylinder002
+    4300170: East Wall002
+    4300172: Granary002
+    4300174: HQ002
+    4300176: man001
+    4300178: Mithraeum I002
+    4300180: Mithraeum Roof002
+    4300182: new001
+    4300184: North Wall002
+    4300186: Nymphaeum Well005
+    4300188: Nymphaeum Well006
+    4300190: OutsideWall_Shrien002
+    4300192: Part of Curtain Wall 003
+    4300194: part of curtain wall 010
+    4300196: part of curtain wall 011
+    4300198: part of curtain wall 012
+    4300200: Part of curtain wall010
+    4300202: Part of curtain wall011
+    4300204: Part of curtain wall012
+    4300206: Part of curtain wall013
+    4300208: plane001
+    4300210: River002
+    4300212: Shrine Bit002
+    4300214: west wall002
+    4300216: Box004
+    4300218: Plane005
+    4300220: Plane006
+    4300222: Plane007
+    4300224: Plane008
+    4300226: Sphere002
+    4300228: part of curtain wall 013
+    4300230: part of curtain wall 014
+    4300232: part of curtain wall 015
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
