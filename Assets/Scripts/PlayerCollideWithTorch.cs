@@ -20,8 +20,12 @@ public class PlayerCollideWithTorch : MonoBehaviour
             //Get particle system
             ParticleSystem ps = other.GetComponent<ParticleSystem>();
 
-            //Play particle system
+            //Play particle system and audio on light
             ps.Play();
+
+            AudioSource audio = other.GetComponent<AudioSource>();
+            audio.Play();
+
         }
     }
 }
