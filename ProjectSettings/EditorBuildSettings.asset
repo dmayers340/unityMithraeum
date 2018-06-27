@@ -6,15 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/VRMenu.unity
-    guid: ea0e8633695110c48b6453defb93777d
+    path: Assets/_Scenes/StartUpScene.unity
+    guid: 71e0a98d514e952459cbbedff2fbe16e
   - enabled: 1
-    path: Assets/_Scenes/WorkingOnVRTK.unity
-    guid: eeb6985d47286de439cc811ea877e363
+    path: Assets/_Scenes/MenuVRSensory.unity
+    guid: 797a5d6369d0a8b4ab8848c389ebe7bb
   - enabled: 1
-    path: Assets/_Scenes/VR_Working.unity
-    guid: c3d7fae4f79b30642a3ea7cd01059b09
+    path: Assets/_Scenes/MenuVR.unity
+    guid: c211b37f563bc8145bef469900133c07
   - enabled: 1
-    path: Assets/_Scenes/InformationScene.unity
-    guid: 7e9404f7d06288a45b8dca1624c4c442
+    path: Assets/_Scenes/ScentScene.unity
+    guid: 8005d56a71ba6c940b89d23ca7a6441e
+  - enabled: 1
+    path: Assets/_Scenes/BaseScene.unity
+    guid: 51215debe38746d4ebb97c1e1f0e238a
   m_configObjects: {}
