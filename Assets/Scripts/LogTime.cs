@@ -3,32 +3,42 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.IO;
 
-public class LogTime : MonoBehaviour {
+/*
+ * This class logs how long a user spends on a level and writes it to a file called logfile.txt
+ * */
+public class LogTime : MonoBehaviour
+{
+    int userNumber = 7;
+    string info = ""; 
 
-    public Button sceneButton;
-    public Text thisText;
-    public int sceneIndex;
-
-    void Awake()
+    //Get time spent on Level
+    string getTime()
     {
-        DontDestroyOnLoad(gameObject);
-        DontDestroyOnLoad(GameObject.Find("canvas"));
+        string timeString = "Time Since Loaded : " + Time.timeSinceLevelLoad;
 
-        if(sceneButton != null)
-        {
-            sceneButton.onClick.AddListener(LoadSceneButton);
-        }
+        return timeString;
     }
-	
-	// Update is called once per frame
-	void Update ()
-    {
-        thisText.text = "Time Since Level Was Loaded: " + Time.timeSinceLevelLoad;
-	}
 
-    void LoadSceneButton()
+    //Get user
+    string getUser()
     {
-        SceneManager.LoadScene(sceneIndex);
+        string userNumberStr = userNumber.ToString();
+
+        return userNumberStr;
     }
+        
+    void WriteToFile()
+    {
+        string file = "Assets/Resources/logfile.txt";
+
+        StreamWriter writer = new StreamWriter(file, true);
+
+        info = getTime() + " " + getUser();
+        writer.WriteLine(info);
+        writer.Close();
+
+    }
+
 }

@@ -2,15 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlaySound : MonoBehaviour {
+/*
+ * Play sound when in certain zones script.
+ * 1.) Attach Script to Player Torch
+ * 2.) If in zone, get the audio source and play
+ * 
+ * */
+public class PlaySound : MonoBehaviour
+{
+    bool hasEntered = false;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("zone") && hasEntered == false)
+        {
+            hasEntered = true;
+
+            AudioSource audio = other.GetComponent<AudioSource>();
+
+            if(!audio.isPlaying)
+            {
+                audio.Play();
+            }
+        }
+    }
+
 }

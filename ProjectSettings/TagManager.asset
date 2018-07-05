@@ -8,6 +8,8 @@ TagManager:
   - door
   - torch
   - canvas
+  - zone
+  - playertorch
   layers:
   - Default
   - TransparentFX
