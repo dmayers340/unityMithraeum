@@ -358,11 +358,16 @@ namespace VRTK
             }
         }
 
+        //My Edit with count number objects grabbed
         public virtual void OnInteractableObjectGrabbed(InteractableObjectEventArgs e)
         {
+            int count = 0;
             if (InteractableObjectGrabbed != null)
             {
                 InteractableObjectGrabbed(this, e);
+                count = count + 1; //raise number of objects grabbed
+                Debug.Log("Object has been grabbed");
+                Debug.Log("Number of objects grabbed = " + count);
             }
         }
 
@@ -454,8 +459,13 @@ namespace VRTK
         /// <returns>Returns `true` if the Interactable Object is currently being grabbed.</returns>
         public virtual bool IsGrabbed(GameObject grabbedBy = null)
         {
+            int count = 0;
+  
             if (grabbingObjects.Count > 0 && grabbedBy != null)
             {
+                count = count + 1; //raise number of objects grabbed
+                Debug.Log("Object has been grabbed");
+                Debug.Log("IsGrabbed() in VRTK_InteractableObject, Number of objects grabbed = " + count);
                 return (grabbingObjects.Contains(grabbedBy));
             }
             return (grabbingObjects.Count > 0);

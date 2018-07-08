@@ -17,6 +17,7 @@ public class PlaySound : MonoBehaviour
         if(other.CompareTag("zone") && hasEntered == false)
         {
             hasEntered = true;
+            Debug.Log("Entered Zone");
 
             AudioSource audio = other.GetComponent<AudioSource>();
 

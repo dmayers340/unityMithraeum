@@ -7,10 +7,12 @@ using System.IO;
 
 /*
  * This class logs how long a user spends on a level and writes it to a file called logfile.txt
+ * 1.) Get time spent on each level
+ * 2.) Print out amount of time for each player
  * */
 public class LogTime : MonoBehaviour
 {
-    int userNumber = 7;
+    int userNumber = 0;
     string info = ""; 
 
     //Get time spent on Level
