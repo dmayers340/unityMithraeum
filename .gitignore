@@ -5,6 +5,7 @@
 /[Bb]uilds/
 /Assets/AssetStoreTools*
 /[Cc]autesCautopates/
+/Assets/Prefab/Statue/
 
 # Visual Studio 2015 cache directory
 /.vs/
@@ -34,5 +35,3 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
-dec_cautesStatue.fbx
-dec_cautopatesStatue.fbx
