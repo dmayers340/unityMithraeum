@@ -26,10 +26,7 @@ public class StartExperience : MonoBehaviour
     void Update ()
     {
         if (!audioSource.isPlaying)
-        {
-            Debug.Log("Audio Stopped Play");
-            
-               
+        {               
             //turn on the light
             ps.Play();
         }
