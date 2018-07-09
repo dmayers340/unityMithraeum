@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 /*
  * This class logs how long a user spends on a level and writes it to a file called logfile.txt
@@ -17,8 +16,11 @@ public class LogTime : MonoBehaviour
     int userNumber = 0;
     float timeSpent;
 
-    public Text timeText;
-    public Text endExperienceText;
+    //Empty Constructor
+    public LogTime()
+    {
+
+    }
 
     void Start()
     {
@@ -32,10 +34,14 @@ public class LogTime : MonoBehaviour
        // Debug.Log("Time Spent: " + Mathf.RoundToInt(timeSpent).ToString());
     }
 
+    public string getTimeSpent()
+    {
+        return Mathf.RoundToInt(timeSpent).ToString();
+    }
     //On ApplicationQuit
     void OnApplicationQuit()
     {
-        Debug.Log("Time Spent: " + Mathf.RoundToInt(timeSpent).ToString());
+        Debug.Log(" From Log Time: Time Spent: " + Mathf.RoundToInt(timeSpent).ToString());
     }
 
     

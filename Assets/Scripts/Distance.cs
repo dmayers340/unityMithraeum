@@ -13,6 +13,12 @@ public class Distance : MonoBehaviour {
     float distance = 0;
     Vector3 lastKnownPosition;
 
+    //Constructor:
+    public Distance()
+    {
+
+    }
+
     // Use this for initialization
     void Start ()
     {
@@ -26,6 +32,11 @@ public class Distance : MonoBehaviour {
         distance = distance + Vector3.Distance(player.transform.position, lastKnownPosition);
         lastKnownPosition = player.transform.position; //Reset lastKnownPosition to current position	
       //  Debug.Log("Distance: " + distance);
+    }
+
+    public float getDistanceWalked()
+    {
+        return distance;
     }
     //On ApplicationQuit
     void OnApplicationQuit()

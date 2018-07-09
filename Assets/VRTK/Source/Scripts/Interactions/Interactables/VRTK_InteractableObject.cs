@@ -62,6 +62,9 @@ namespace VRTK
     [AddComponentMenu("VRTK/Scripts/Interactions/Interactables/VRTK_InteractableObject")]
     public class VRTK_InteractableObject : MonoBehaviour
     {
+
+        int countOfObjects = 0; //my edit
+
         /// <summary>
         /// The interaction type.
         /// </summary>
@@ -361,14 +364,19 @@ namespace VRTK
         //My Edit with count number objects grabbed
         public virtual void OnInteractableObjectGrabbed(InteractableObjectEventArgs e)
         {
-            int count = 0;
             if (InteractableObjectGrabbed != null)
             {
                 InteractableObjectGrabbed(this, e);
-                count = count + 1; //raise number of objects grabbed
+                countOfObjects = countOfObjects + 1; //raise number of objects grabbed
                 Debug.Log("Object has been grabbed");
-                Debug.Log("Number of objects grabbed = " + count);
+                Debug.Log("Number of objects grabbed = " + countOfObjects);
             }
+        }
+
+        //My edit: Get count of Object
+        public string getCountOfObjectsGrabbed()
+        {
+            return countOfObjects.ToString();
         }
 
         public virtual void OnInteractableObjectUngrabbed(InteractableObjectEventArgs e)

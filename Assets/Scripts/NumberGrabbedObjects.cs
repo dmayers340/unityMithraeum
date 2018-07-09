@@ -6,6 +6,12 @@ public class NumberGrabbedObjects : MonoBehaviour {
 
     int countGrabbedObjects;
 
+    //Empty Constructor
+    public NumberGrabbedObjects()
+    {
+
+    }
+
 	// Use this for initialization
 	void Start ()
     {
@@ -18,6 +24,10 @@ public class NumberGrabbedObjects : MonoBehaviour {
         //Debug.Log("Count of Grabbed Objects " + countGrabbedObjects);	
 	}
 
+    public int getGrabbedObjects()
+    {
+        return countGrabbedObjects;
+    }
     void OnApplicationQuit ()
     {
         Debug.Log("Count of Grabbed Objects " + countGrabbedObjects);	
