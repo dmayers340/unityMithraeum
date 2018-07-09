@@ -12,20 +12,40 @@ using UnityEngine;
 
 public class PlayerCollideWithTorch : MonoBehaviour
 {
+    int numTorchesLit;
+    bool torchLit = false;
+
+    private void Start()
+    {
+        numTorchesLit = 0;
+    }
     private void OnTriggerEnter(Collider other)
     {
         //If player collides with torch
         if (other.CompareTag("torch")) 
         {
+            torchLit = true;
+
             //Get particle system
             ParticleSystem ps = other.GetComponent<ParticleSystem>();
 
             //Play particle system and audio on light
             ps.Play();
-
+     
             AudioSource audio = other.GetComponent<AudioSource>();
             audio.Play();
 
+            if (torchLit == true)
+            {
+                numTorchesLit = numTorchesLit + 1;
+                Debug.Log("Num torches lit = " + numTorchesLit);
+            }
+   
         }
+    }
+
+    public int getNumTorchesLit()
+    {
+        return numTorchesLit;
     }
 }
