@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExitPrintOut : MonoBehaviour {
+public class ExitPrintOut : MonoBehaviour
+{
 
 	// Use this for initialization
 	void Start () {

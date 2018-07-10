@@ -12,6 +12,7 @@ TagManager:
   - playertorch
   - environment
   - management
+  - hand
   layers:
   - Default
   - TransparentFX

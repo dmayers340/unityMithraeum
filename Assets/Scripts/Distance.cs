@@ -35,13 +35,14 @@ public class Distance : MonoBehaviour {
         lastKnownPosition = player.transform.position; //Reset lastKnownPosition to current position	
     }
 
-    public float getDistanceWalked()
+    public string getDistanceWalked()
     {
-        return distance;
+        return Mathf.RoundToInt(distance).ToString();
     }
+
     //On ApplicationQuit Have it Print out the Distance
     void OnApplicationQuit()
     {
-        Debug.Log("Application Distance Walked: " + distance);
+        Debug.Log("Application Distance Walked: " + getDistanceWalked());
     }
 }
