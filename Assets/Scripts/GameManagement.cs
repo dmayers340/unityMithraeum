@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using VRTK;
 
+/*
+ * Game Management to attach to GameManagement Object
+ * This will keep track off all the logging scripts and get the distance, time, gaze, and objects grabbed
+ * at the end of the experience
+ * */
 public class GameManagement : MonoBehaviour
 {
     /*

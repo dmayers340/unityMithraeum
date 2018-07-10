@@ -4,7 +4,8 @@ using UnityEngine;
 
 /*
  * Play sound when user enters certain zones script.
- * 
+ * In a further rendition, the sound should actually be spatialized and placed on an audio source
+ * i.e. the tauroctony or a 'god figure'
  * 1.) Attach Script to Zone
  * 2.) If player torch enters the zone, get the audio source and play
  * */

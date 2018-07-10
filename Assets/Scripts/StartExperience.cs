@@ -3,32 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
- * Start of the experience.
- * 1.) Start with directional light off
- * 2.) Play sound clip 
- * 3.) When sound ends turn on torch light OR SHOULD I DO start new scene?
+ * Start of the experience. Mithras voice will play, Mithras will say he will light the torch, light torch and play torch sound upon lighting.
+ * Steps:
+ * 1.) Attach to StartExperience Game Object, really can be attached to any game object
+ * 2.) Start with Dark Lighting (Directional light is down, only light from the torches on fort and altar light is shown)
+ * 3.) Play sound clip 
+ * 4.) When sound ends turn on torch light and torch sound
  * */
 public class StartExperience : MonoBehaviour
 {
-   public AudioSource audioSource;
-   public GameObject torch;
-   ParticleSystem ps;
+    public AudioSource godAudio;
+    public AudioSource torchAudio;
+    public GameObject torch;
+    private ParticleSystem ps;
 
-    // Use this for initialization
+    //Set up the Particle System, torch Audio, god audio and play god voice
     void Start ()
     {
         ps = torch.GetComponent<ParticleSystem>();
-        audioSource = GetComponent<AudioSource>();
-        audioSource.Play();
+        godAudio = GetComponent<AudioSource>();
+        torchAudio = torch.GetComponent<AudioSource>();
+        godAudio.Play();
     }
 
-    // Update is called once per frame
     void Update ()
     {
-        if (!audioSource.isPlaying)
+        //Once the god is done speaking, turn on the light and play torch sound
+        if (!godAudio.isPlaying)
         {               
-            //turn on the light
             ps.Play();
+            torchAudio.Play();
         }
 	}
     
