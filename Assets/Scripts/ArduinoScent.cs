@@ -13,18 +13,18 @@ public class ArduinoScent : MonoBehaviour
 
     int buttonState = 0;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start()
     {
         stream.Open();
-	}
-	
-	// Update is called once per frame
-	void Update ()
+    }
+
+    // Update is called once per frame
+    void Update()
     {
         string value = stream.ReadLine();
         buttonState = int.Parse(value);
-	}
+    }
 
     void printOut()
     {
