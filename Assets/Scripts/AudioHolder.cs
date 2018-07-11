@@ -6,24 +6,23 @@ using UnityEngine;
  * Keep a queue of audio files to play when called
  * If user enters a Sound Zone, the audio should be placed in the audioSourceList to be played once the previous 
  * audio source finishes playing
+ * 
+ * Play the first audio clip that is queued as needed
  * */
-
 public class AudioHolder : MonoBehaviour
 {
-    public List<AudioSource> audioSourceArrayList; //List of audio files, can grow as needed
+    Queue<AudioSource> audioQueue = new Queue<AudioSource>(); //List of audio files, can grow as needed
     int index = 0; //index of array
     AudioSource currentAudioSource; //current audio source
     bool hasAudio;
 
     void Start()
     {
-        audioSourceArrayList = new List<AudioSource>();
-        currentAudioSource = audioSourceArrayList[index];
+        currentAudioSource = audioQueue.Dequeue();
 
-        if (audioSourceArrayList.Count > 0)
+        if (audioQueue.Count > 0)
         {
             AudioPlay();
-          //  StartCoroutine(PlayAudio()); //Always play some audio...Not sure this is what I want
         }
     }
 
@@ -31,9 +30,8 @@ public class AudioHolder : MonoBehaviour
     {
         if(!currentAudioSource.isPlaying)
         {
-            currentAudioSource = audioSourceArrayList[index];
-            currentAudioSource.Play();
-            index++;
+            currentAudioSource.Play(); //play audio source
+            audioQueue.Dequeue(); //then dequeue it
         }
     }
 
@@ -41,25 +39,7 @@ public class AudioHolder : MonoBehaviour
     {
         if(audioSource != null)
         {
-            audioSourceArrayList.Add(audioSource);
+            audioQueue.Enqueue(audioSource);
         }
-    }
-
-    /*
-    IEnumerator PlayAudio()
-    {
-        while(true)
-        {
-            //if the current audio source is not playing
-            if(!currentAudioSource.isPlaying)
-            {
-                //play the current audio source
-                currentAudioSource = audioSourceArrayList[index];
-                currentAudioSource.Play();
-                index++; //increase the index
-            }
-        }
-    }
-    */
-	
+    }	
 }
