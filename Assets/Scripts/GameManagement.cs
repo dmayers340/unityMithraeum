@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using VRTK;
+using System.IO;
 
 /*
  * Game Management to attach to GameManagement Object
@@ -14,21 +15,31 @@ public class GameManagement : MonoBehaviour
     Distance distanceScript;
     NumberGrabbedObjects grabbedScript;
     public GameObject gameManagement;
+    private string outputFileName = "dataOutFile.txt";
     
     void Start()
     {
-        gameManagement = GameObject.Find("management");
 
-        timeScript = gameManagement.AddComponent<LogTime>(); 
-        distanceScript = gameManagement.AddComponent<Distance>();
-        grabbedScript = gameManagement.AddComponent<NumberGrabbedObjects>();
+        timeScript = gameManagement.GetComponent<LogTime>(); 
+        distanceScript = gameManagement.GetComponent<Distance>();
+        grabbedScript = gameManagement.GetComponent<NumberGrabbedObjects>();
+
+        WriteToFile();
     }
 
     void OnApplicationQuit()
     {
-        Debug.Log("Count of Grabbed Objects " + grabbedScript.getGrabbedObjects());
-        Debug.Log("Application Distance Walked: " + distanceScript.getDistanceWalked());
-        Debug.Log("Time Spent: " + timeScript.getTimeSpent());
+        WriteToFile();
+        Debug.Log("From Game Management Count of Grabbed Objects " + grabbedScript.getGrabbedObjects());
+        Debug.Log("From Game Management Application Distance Walked: " + distanceScript.getDistanceWalked());
+        Debug.Log("From Game Management Time Spent: " + timeScript.getTimeSpent());
     }
    
+
+    void WriteToFile()
+    {
+        StreamWriter writer = new StreamWriter(outputFileName, true);
+        writer.WriteLine("Test");
+        writer.Close();
+    }
 }

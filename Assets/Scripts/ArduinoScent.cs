@@ -22,6 +22,10 @@ public class ArduinoScent : MonoBehaviour
         {
             Debug.Log("Serial Port Open");
         }
+        else
+        {
+            connection.Close();
+        }
     }
 
     // Update is called once per frame

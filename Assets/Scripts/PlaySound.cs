@@ -33,15 +33,19 @@ public class PlaySound : MonoBehaviour
         {
             hasEntered = true;
             Debug.Log("Entered Zone");
-
-            AudioSource audio = GetComponent<AudioSource>();
-            audioQueue.AddAudioSourceToList(audio);
-            audioQueue.AudioPlay();
-           // if(!audio.isPlaying)
-           //{
-           //  audio.Play();
-           //}
+            PlayAudio();
         }
     }
 
+    public void PlayAudio()
+    {
+        AudioSource audio = GetComponent<AudioSource>();
+        audioQueue.AddAudioSourceToList(audio);
+        Debug.Log("Size of audio queue: " + audioQueue.getSize());
+        audioQueue.AudioPlay();
+        // if(!audio.isPlaying)
+        //{
+        //  audio.Play();
+        //}
+    }
 }
