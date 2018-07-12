@@ -9,9 +9,9 @@ using UnityEngine;
  * */
 public class AudioQueue : MonoBehaviour
 {
-    Queue<AudioSource> audioQueue = new Queue<AudioSource>(); //Queue of audio files, can grow as needed
+    List<AudioSource> audioQueue = new List<AudioSource>(); //Queue of audio files, can grow as needed
     AudioSource currentAudioSource; //current audio source
-
+    int index = 0;
     bool hasAudio;
 
     /*
@@ -24,12 +24,15 @@ public class AudioQueue : MonoBehaviour
     public void AudioPlay()
     {
         //the current audio source is taken from the audio queue
-        currentAudioSource = audioQueue.Dequeue();
+        //  currentAudioSource = audioQueue.Dequeue();
+        currentAudioSource = audioQueue[index];
 
         if (!currentAudioSource.isPlaying && hasAudioInQueue() == true)
         {
             currentAudioSource.Play(); //play audio source
-            currentAudioSource = audioQueue.Dequeue(); //get the enxt audio source from queue
+                                       //  currentAudioSource = audioQueue.Dequeue(); //get the enxt audio source from queue
+
+            currentAudioSource = audioQueue[index + 1];
         }
     }
 
@@ -58,8 +61,8 @@ public class AudioQueue : MonoBehaviour
     {
         if(audioSource != null)
         {
-            audioQueue.Enqueue(audioSource); //add audio source
-            AudioPlay(); //Start playing
+            audioQueue.Add(audioSource);
+            //audioQueue.Enqueue(audioSource); //add audio source
         }
     }	
 }

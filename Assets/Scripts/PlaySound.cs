@@ -12,12 +12,10 @@ using UnityEngine;
 
 public class PlaySound : MonoBehaviour
 {
-    //making this public so multiple queues can be made as needed if extended
     public GameObject sounds;
-    //REFERENCE to AudioQueue script
-    AudioQueue audioQueue; 
-    //boolean to let know if user has entered the zone before
-    bool hasEntered = false;
+    AudioQueue audioQueue; //REFERENCE to AudioQueue script
+    bool hasEntered = false;  //boolean to let know if user has entered the zone before
+
 
     //Get audioQueue script from sound
     void Start()
@@ -38,6 +36,7 @@ public class PlaySound : MonoBehaviour
 
             AudioSource audio = GetComponent<AudioSource>();
             audioQueue.AddAudioSourceToList(audio);
+            audioQueue.AudioPlay();
            // if(!audio.isPlaying)
            //{
            //  audio.Play();
