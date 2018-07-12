@@ -14,12 +14,6 @@ public class AudioQueue : MonoBehaviour
 
     bool hasAudio;
 
-    void Start()
-    {
-        //the current audio source is taken from the audio queue
-        currentAudioSource = audioQueue.Dequeue();
-    }
-
     /*
      * If no audio is playing and there are audio source in the queue:
      * 1.) Get the currentAudioSource
@@ -29,7 +23,10 @@ public class AudioQueue : MonoBehaviour
     */
     public void AudioPlay()
     {
-        if(!currentAudioSource.isPlaying && hasAudioInQueue() == true)
+        //the current audio source is taken from the audio queue
+        currentAudioSource = audioQueue.Dequeue();
+
+        if (!currentAudioSource.isPlaying && hasAudioInQueue() == true)
         {
             currentAudioSource.Play(); //play audio source
             currentAudioSource = audioQueue.Dequeue(); //get the enxt audio source from queue
