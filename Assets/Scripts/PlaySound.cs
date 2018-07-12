@@ -12,16 +12,19 @@ using UnityEngine;
 
 public class PlaySound : MonoBehaviour
 {
+    //making this public so multiple queues can be made as needed if extended
     public GameObject sounds;
-    AudioHolder audioQueue;
-
+    //REFERENCE to AudioQueue script
+    AudioQueue audioQueue; 
     //boolean to let know if user has entered the zone before
     bool hasEntered = false;
 
+    //Get audioQueue script from sound
     void Start()
     {
-        audioQueue = sounds.GetComponent<AudioHolder>();
+        audioQueue = sounds.GetComponent<AudioQueue>();
     }
+
     //Use on Trigger. Play torch has the rigid body
     //Sound is attached to this zone object
     private void OnTriggerEnter(Collider other)
@@ -34,10 +37,11 @@ public class PlaySound : MonoBehaviour
             Debug.Log("Entered Zone");
 
             AudioSource audio = GetComponent<AudioSource>();
-            if(!audio.isPlaying)
-            {
-                audio.Play();
-            }
+            audioQueue.AddAudioSourceToList(audio);
+           // if(!audio.isPlaying)
+           //{
+           //  audio.Play();
+           //}
         }
     }
 

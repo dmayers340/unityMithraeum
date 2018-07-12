@@ -9,20 +9,25 @@ using System;
 public class ArduinoScent : MonoBehaviour
 {
     public static string COMPort = "COM5";
-    SerialPort stream = new SerialPort(COMPort, 9600); //This is on arduino COM Port and baud rate
+    SerialPort connection = new SerialPort(COMPort, 9600); //This is on arduino COM Port and baud rate
 
     int buttonState = 0;
 
     // Use this for initialization
     void Start()
     {
-        stream.Open();
+        connection.Open();
+
+        if (connection.IsOpen)
+        {
+            Debug.Log("Serial Port Open");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        string value = stream.ReadLine();
+        string value = connection.ReadLine();
         buttonState = int.Parse(value);
     }
 
@@ -30,6 +35,16 @@ public class ArduinoScent : MonoBehaviour
     {
         string connectedString = "Connected + " + buttonState;
         Debug.Log(connectedString);
+    }
+
+    void OnApplicationQuit()
+    {
+        connection.Close();
+
+        if (!connection.IsOpen)
+        {
+            Debug.Log("Connection is closed");
+        }
     }
 
 }
