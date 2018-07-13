@@ -29,7 +29,7 @@ public class PlaySound : MonoBehaviour
     {
         //if the thing entering the zone is the player's torch and they have not entered before
         //then make the boolean true, get the audio source and if it is not playing, play the audio
-        if(other.CompareTag("playertorch") && hasEntered == false)
+        if(other.CompareTag("playertorch")  && hasEntered == false)
         {
             hasEntered = true;
             Debug.Log("Entered Zone");

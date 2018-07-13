@@ -18,20 +18,20 @@ public class VRUserLookingAt : MonoBehaviour
 {
     public Camera hmdCamera;
 
-    void Start()
+    void Update()
     {
         RaycastHit hit;
-     //   Ray lookRay = new Ray(Vector3 origin, Vector3 direction);
+        
+        Ray lookRay = new Ray(hmdCamera.transform.position, hmdCamera.transform.forward);
 
-      //  if (Physics.Raycast(lookRay, out hit))
-        //{
-           // Transform objectHit = hit.transform;
-            //create heatmap
-       
-        //}
+        if (Physics.Raycast(lookRay, out hit))
+        {
+            if(hit.collider.CompareTag("environment"))
+            {
+                Debug.Log("Looking at the scene sy " + hit.distance);
+            }  
+        }
+        Debug.DrawRay(hmdCamera.transform.position, hmdCamera.transform.forward, Color.black, 1);
 
     }
-        //raycast = collider hit-which objects intersected by ray
-        //distance and layermask-place objects if ray ignroed
-        //origin and direction = ray
 }

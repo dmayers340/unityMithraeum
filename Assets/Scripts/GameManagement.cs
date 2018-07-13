@@ -19,27 +19,27 @@ public class GameManagement : MonoBehaviour
     
     void Start()
     {
-
         timeScript = gameManagement.GetComponent<LogTime>(); 
         distanceScript = gameManagement.GetComponent<Distance>();
         grabbedScript = gameManagement.GetComponent<NumberGrabbedObjects>();
-
-        WriteToFile();
     }
 
     void OnApplicationQuit()
     {
-        WriteToFile();
+        WriteToFile(grabbedScript.getGrabbedObjects().ToString());
+        WriteToFile(distanceScript.getDistanceWalked().ToString());
+        WriteToFile(timeScript.getTimeSpent().ToString());
+
         Debug.Log("From Game Management Count of Grabbed Objects " + grabbedScript.getGrabbedObjects());
         Debug.Log("From Game Management Application Distance Walked: " + distanceScript.getDistanceWalked());
         Debug.Log("From Game Management Time Spent: " + timeScript.getTimeSpent());
     }
    
 
-    void WriteToFile()
+    void WriteToFile(string data)
     {
         StreamWriter writer = new StreamWriter(outputFileName, true);
-        writer.WriteLine("Test");
+        writer.WriteLine(data);
         writer.Close();
     }
 }
