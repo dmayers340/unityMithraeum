@@ -12,6 +12,7 @@ public class AudioQueue : MonoBehaviour
     //Changed to list
     List<AudioSource> audioQueue = new List<AudioSource>(); //Queue of audio files, can grow as needed
     AudioSource currentAudioSource; //current audio source
+
     int index = 0;
     bool hasAudio;
 
@@ -24,12 +25,19 @@ public class AudioQueue : MonoBehaviour
     */
     public void AudioPlay()
     {   
-        foreach (AudioSource sourceAudio in audioQueue)
+        for (int i = 0; i<audioQueue.Count; i++)
         {
-            if (!sourceAudio.isPlaying && hasAudioInQueue() == true)
-            { 
-                sourceAudio.Play(); //play audio source
+            currentAudioSource = audioQueue[i];
+            if(!currentAudioSource.isPlaying && hasAudioInQueue() == true)
+            {
+                currentAudioSource.Play();
             }
+        //foreach (AudioSource sourceAudio in audioQueue)
+        //{
+          //  if (!sourceAudio.isPlaying && hasAudioInQueue() == true)
+            //{ 
+               // sourceAudio.Play(); //play audio source
+            //}
         }
     }
 

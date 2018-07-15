@@ -11,9 +11,13 @@ using System.IO;
  * */
 public class GameManagement : MonoBehaviour
 {
+    //Get all the scripts
     LogTime timeScript;
     Distance distanceScript;
     NumberGrabbedObjects grabbedScript;
+    EndExperience endGame;
+
+    public GameObject endGameObject;
     public GameObject gameManagement;
     private string outputFileName = "dataOutFile.txt";
     
@@ -22,6 +26,7 @@ public class GameManagement : MonoBehaviour
         timeScript = gameManagement.GetComponent<LogTime>(); 
         distanceScript = gameManagement.GetComponent<Distance>();
         grabbedScript = gameManagement.GetComponent<NumberGrabbedObjects>();
+        endGame = endGameObject.GetComponent<EndExperience>();
     }
 
     void OnApplicationQuit()

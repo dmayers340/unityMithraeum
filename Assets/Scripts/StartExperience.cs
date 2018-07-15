@@ -14,8 +14,12 @@ public class StartExperience : MonoBehaviour
 {
     public AudioSource godAudio;
     public AudioSource torchAudio;
+
     public GameObject torch;
     private ParticleSystem ps;
+
+    public AudioClip grabTorchAudioClip;
+    public AudioClip godAudioClipStart;
 
     //Set up the Particle System, torch Audio, god audio and play god voice
     void Start ()
@@ -23,17 +27,37 @@ public class StartExperience : MonoBehaviour
         ps = torch.GetComponent<ParticleSystem>();
         godAudio = GetComponent<AudioSource>();
         torchAudio = torch.GetComponent<AudioSource>();
+        grabTorchAudioClip = GetComponent<AudioClip>();
+
+
+        //Play God Auido
+        godAudio.clip = godAudioClipStart;
         godAudio.Play();
+
+        //Once the first clip finishes, play the second clip
+        //does not get into here
+        if (!godAudio.isPlaying)
+        {
+            godAudio.clip = grabTorchAudioClip;
+            godAudio.Play();
+           // PlayParticleSystem();
+        }
     }
 
     void Update ()
     {
         //Once the god is done speaking, turn on the light and play torch sound
+        PlayParticleSystem();
+	}
+
+    //The audio for the player torch is acting strangely
+    void PlayParticleSystem()
+    {
         if (!godAudio.isPlaying)
-        {               
+        {
             ps.Play();
             torchAudio.Play();
         }
-	}
+    }
     
 }

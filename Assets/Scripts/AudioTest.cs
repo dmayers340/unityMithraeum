@@ -2,9 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioTest : MonoBehaviour{
+public class AudioTest : MonoBehaviour
+{
+    //Make a Queue of Audio Clips
     public List<AudioClip> audioQueue = new List<AudioClip>();
+
+    public GameObject audioQueueObj;
+    Queue<AudioSource> audioSourceQueue = new Queue<AudioSource>();
+
+    //Have index of where we are at in the queue
     int index = 0;
+
+    //Get the One AudioSource
     AudioSource audio;
 
     public AudioClip firstClip;
@@ -44,6 +53,22 @@ public class AudioTest : MonoBehaviour{
                 index += 1;
             }
         }
+
+        else if(other.CompareTag("zone") && hasEntered == false)
+        {
+            QueueAudio(other.GetComponent<AudioSource>());
+        }
     }
 
+    void QueueAudio(AudioSource source)
+    {
+        audioSourceQueue.Enqueue(source);
+
+        if(!source.isPlaying)
+        {
+           AudioSource dequed = audioSourceQueue.Dequeue();
+            dequed.Play();
+        }
+        
+    }
 }
