@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//CURRENTLY, WHEN PASSES THROUGH EACH ZONE PLAYS ALL AUDIO CLIPS (I.E. clip1, clip2, clip3 and when new zone: clip1, clip2, clip3, clip4)
 
 /* 
  * Keep a queue of audio files to play when called
@@ -27,17 +28,12 @@ public class AudioQueue : MonoBehaviour
     {   
         for (int i = 0; i<audioQueue.Count; i++)
         {
-            currentAudioSource = audioQueue[i];
-            if(!currentAudioSource.isPlaying && hasAudioInQueue() == true)
-            {
-                currentAudioSource.Play();
+            AudioSource sourceAudio = audioQueue[i];
+
+            if (!sourceAudio.isPlaying && hasAudioInQueue() == true)
+            { 
+                sourceAudio.Play(); //play audio source
             }
-        //foreach (AudioSource sourceAudio in audioQueue)
-        //{
-          //  if (!sourceAudio.isPlaying && hasAudioInQueue() == true)
-            //{ 
-               // sourceAudio.Play(); //play audio source
-            //}
         }
     }
 

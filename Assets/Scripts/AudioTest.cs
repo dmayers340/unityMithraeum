@@ -4,71 +4,35 @@ using UnityEngine;
 
 public class AudioTest : MonoBehaviour
 {
-    //Make a Queue of Audio Clips
-    public List<AudioClip> audioQueue = new List<AudioClip>();
-
-    public GameObject audioQueueObj;
-    Queue<AudioSource> audioSourceQueue = new Queue<AudioSource>();
-
-    //Have index of where we are at in the queue
-    int index = 0;
-
-    //Get the One AudioSource
-    AudioSource audio;
-
-    public AudioClip firstClip;
-    public AudioClip secondClip;
-    public AudioClip thirdClip;
-    public AudioClip fourthClip;
-    public AudioClip fifthClip;
-    public AudioClip sixthClip;
-    public AudioClip seventhClip;
-    public AudioClip eigthClip;
-
+    public AudioSource audio;
+    public AudioClip[] audioClips;
     bool hasEntered = false;
-	// Use this for initialization
-	void Start ()
+
+    private void OnTriggerEnter(Collider other)
     {
-        audioQueue.Add(firstClip);
-        audioQueue.Add(secondClip);
-        audioQueue.Add(thirdClip);
-        audioQueue.Add(fourthClip);
-        audioQueue.Add(fifthClip);
-        audioQueue.Add(sixthClip);
-        audioQueue.Add(seventhClip);
-        audioQueue.Add(eigthClip);
-	}
-	
-    void OnTriggerEnter(Collider other)
-    {
-        audio = other.GetComponent<AudioSource>();
-        if(other.CompareTag("zone") && hasEntered == false)
+        //if the thing entering the zone is the player's torch and they have not entered before
+        //then make the boolean true, get the audio source and if it is not playing, play the audio
+        if (other.CompareTag("playertorch") && hasEntered == false)
         {
             hasEntered = true;
             Debug.Log("Entered Zone");
-            if (!audio.isPlaying)
-            {
-                audio.clip = audioQueue[index];
-                audio.Play();
-                index += 1;
-            }
-        }
-
-        else if(other.CompareTag("zone") && hasEntered == false)
-        {
-            QueueAudio(other.GetComponent<AudioSource>());
+            StartCoroutine(playAudioClips());
         }
     }
 
-    void QueueAudio(AudioSource source)
+    IEnumerator playAudioClips()
     {
-        audioSourceQueue.Enqueue(source);
+        yield return null;
 
-        if(!source.isPlaying)
+        for (int i = 0; i<audioClips.Length; i++)
         {
-           AudioSource dequed = audioSourceQueue.Dequeue();
-            dequed.Play();
+            audio.clip = audioClips[i];
+            audio.Play();
+
+            while(audio.isPlaying)
+            {
+                yield return null;
+            }
         }
-        
     }
 }
