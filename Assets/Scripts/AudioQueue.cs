@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//CURRENTLY, WHEN PASSES THROUGH EACH ZONE PLAYS ALL AUDIO CLIPS (I.E. clip1, clip2, clip3 and when new zone: clip1, clip2, clip3, clip4)
 
 /* 
  * Keep a queue of audio files to play when called
@@ -10,8 +9,10 @@ using UnityEngine;
  * */
 public class AudioQueue : MonoBehaviour
 {
+   Queue<AudioSource> audioQueue = new Queue<AudioSource>();
+
     //Changed to list
-    List<AudioSource> audioQueue = new List<AudioSource>(); //Queue of audio files, can grow as needed
+    List<AudioSource> audio2Queue = new List<AudioSource>(); //Queue of audio files, can grow as needed
     AudioSource currentAudioSource; //current audio source
 
     int index = 0;
@@ -25,16 +26,28 @@ public class AudioQueue : MonoBehaviour
      *  4.) Play that audio
     */
     public void AudioPlay()
-    {   
-        for (int i = 0; i<audioQueue.Count; i++)
-        {
-            AudioSource sourceAudio = audioQueue[i];
+    {
 
-            if (!sourceAudio.isPlaying && hasAudioInQueue() == true)
-            { 
-                sourceAudio.Play(); //play audio source
-            }
+        currentAudioSource = audio2Queue[index];
+        if(!currentAudioSource.isPlaying)
+        {
+            currentAudioSource.Play();
+            index += 1;
         }
+
+
+        /*
+         * Queue Error Message: Object reference not set to an instance of an object
+AudioQueue.AudioPlay () (at Assets/Scripts/AudioQueue.cs:40)
+PlaySound.PlayAudio () (at Assets/Scripts/PlaySound.cs:46)
+PlaySound.OnTriggerEnter (UnityEngine.Collider other) (at Assets/Scripts/PlaySound.cs:36)
+
+         if(!currentAudioSource.isPlaying)
+         {
+             RemoveAudioSourceToPlay();
+         }
+         */
+
     }
 
     /* This checks to see if there is audio in the queue
@@ -42,7 +55,7 @@ public class AudioQueue : MonoBehaviour
      * */
     private bool hasAudioInQueue()
     {
-        if (audioQueue.Count > 0)
+        if (audio2Queue.Count > 0)
         {
             hasAudio = true;
         }
@@ -55,24 +68,37 @@ public class AudioQueue : MonoBehaviour
     }
 
     /*
+    public AudioSource RemoveAudioSourceToPlay()
+    {
+        currentAudioSource = audioQueue.Dequeue();
+        return currentAudioSource;
+    }
+    */
+
+
+    /*
      * This is to communicate with the PlayAudio script
      * If a player runs into an audio zone, Play Audio will add the audio source to the queue and then start the play function
      * */
     public void AddAudioSourceToList(AudioSource audioSource)
     {
-        if(audioSource != null)
+        if (audioSource != null)
         {
-            audioQueue.Add(audioSource);
-            Debug.Log("Added Audio To Queue! Size: " + audioQueue.Count);
+           // audioQueue.Enqueue(audioSource);
+
+            audio2Queue.Add(audioSource);
+          //  Debug.Log("Added Audio To Queue! Size: " + audioQueue.Count);
+
+            Debug.Log("Added Audio To Queu2e! Size: " + audio2Queue.Count);
         }
         else
         {
             Debug.Log("Cannot add audio, no source found");
         }
-    }	
+    }
 
     public int getSize()
     {
-        return audioQueue.Count;
+        return audio2Queue.Count;
     }
 }
