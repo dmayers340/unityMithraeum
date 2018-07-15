@@ -8,13 +8,20 @@ using UnityEngine.SceneManagement;
  * */ 
 public class LoadSceneOnClick : MonoBehaviour
 {
-
-public void LoadByIndex(int sceneIndex) //setting value in button
+    
+    public void LoadByIndex(int sceneIndex) //setting value in button
     {
-        SceneManager.LoadScene(sceneIndex);
+        if(Input.GetKeyDown("space"))
+        {
+            SceneManager.LoadScene(sceneIndex);
+        }
+        else
+        {
+            SceneManager.LoadScene(sceneIndex);
+        }
     }
 
-public void exitGame()
+    public void exitGame()
     {
         Application.Quit();
     }
