@@ -9,6 +9,7 @@ using System;
 public class ArduinoScent : MonoBehaviour
 {
     public static string COMPort = "COM5";
+
     SerialPort connection = new SerialPort(COMPort, 9600); //This is on arduino COM Port and baud rate
 
     int buttonState = 0;
@@ -17,22 +18,30 @@ public class ArduinoScent : MonoBehaviour
     void Start()
     {
         connection.Open();
-
+        connection.ReadTimeout = 1;
         if (connection.IsOpen)
         {
             Debug.Log("Serial Port Open");
-        }
-        else
-        {
-            connection.Close();
         }
     }
 
     // Update is called once per frame
     void Update()
     {
+        try
+        {
+            print(connection.ReadLine());
+        }
+        catch(System.Exception d)
+        {
+            
+        }
+
+        /*
         string value = connection.ReadLine();
         buttonState = int.Parse(value);
+   
+    */
     }
 
     void printOut()
