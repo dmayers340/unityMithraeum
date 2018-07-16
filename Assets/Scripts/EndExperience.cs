@@ -64,18 +64,16 @@ public class EndExperience : MonoBehaviour
 	// Update is called once per frame
 	public void StopLights ()
     {
-        if (!audioSource.isPlaying)
-        {
-            psOne.Stop();
-            psTwo.Stop();
-            psThree.Stop();
-            psFour.Stop();
-            psFive.Stop();
-            psSix.Stop();
-            psSeven.Stop();
-            psEight.Stop();
-            psNine.Stop();
-        }
-		
+   
+        psOne.Stop();
+        psTwo.Stop();
+        psThree.Stop();
+        psFour.Stop();
+        psFive.Stop();
+        psSix.Stop();
+        psSeven.Stop();
+        psEight.Stop();
+        psNine.Stop();
+   
 	}
 }

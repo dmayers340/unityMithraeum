@@ -17,6 +17,7 @@ public class AudioQueue : MonoBehaviour
 
     int index = 0;
     bool hasAudio;
+    bool hasBeenAdded = false;
 
     /*
      * If no audio is playing and there are audio source in the queue:
@@ -78,11 +79,12 @@ public class AudioQueue : MonoBehaviour
      * */
     public void AddAudioSourceToList(AudioSource audioSource)
     {
-        if (audioSource != null)
+        if (audioSource != null && hasBeenAdded == false)
         {
            // audioQueue.Enqueue(audioSource);
 
             audio2Queue.Add(audioSource);
+            hasBeenAdded = true;
           //  Debug.Log("Added Audio To Queue! Size: " + audioQueue.Count);
 
             Debug.Log("Added Audio To Queu2e! Size: " + audio2Queue.Count);

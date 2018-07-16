@@ -21,28 +21,30 @@ public class PlayerCollideWithTorch : MonoBehaviour
     {
         numTorchesLit = 0;
     }
+
     private void OnTriggerEnter(Collider other)
     {
         //If player collides with torch
         if (other.CompareTag("torch")) 
         {
-            torchLit = true;
-
             //Get particle system
             ParticleSystem ps = other.GetComponent<ParticleSystem>();
 
             //Play particle system and audio on light
             ps.Play();
-     
+            torchLit = true;
+
             AudioSource audio = other.GetComponent<AudioSource>();
             audio.Play();
+            numTorchesLit += 1;
 
+            /*
             if (torchLit == true)
             {
                 numTorchesLit += 1;
                 Debug.Log("Num torches lit = " + numTorchesLit); //this is not working correctly
             }
-   
+            */
         }
     }
 

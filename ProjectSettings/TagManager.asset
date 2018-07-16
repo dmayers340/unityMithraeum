@@ -3,7 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - zone
+  - playertorch
+  - torch
+  - environment
+  - management
+  - hand
+  - zoneB
+  - zoneA
+  - zoneC
+  - zoneD
+  - zoneE
+  - zoneF
+  - zoneG
+  - zoneH
+  - zoneI
   layers:
   - Default
   - TransparentFX
