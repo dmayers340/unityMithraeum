@@ -19,6 +19,7 @@ TagManager:
   - zoneG
   - zoneH
   - zoneI
+  - entered
   layers:
   - Default
   - TransparentFX
