@@ -11,14 +11,7 @@ public class LoadSceneOnClick : MonoBehaviour
     
     public void LoadByIndex(int sceneIndex) //setting value in button
     {
-        if(Input.GetKeyDown("space"))
-        {
             SceneManager.LoadScene(sceneIndex);
-        }
-        else
-        {
-            SceneManager.LoadScene(sceneIndex);
-        }
     }
 
     public void exitGame()

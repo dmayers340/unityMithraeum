@@ -9,7 +9,7 @@ using UnityEngine;
  * */
 public class AudioQueue : MonoBehaviour
 {
-   Queue<AudioSource> audioQueue = new Queue<AudioSource>();
+   // Queue<AudioSource> audioQueue = new Queue<AudioSource>();
 
     //Changed to list
     List<AudioSource> audio2Queue = new List<AudioSource>(); //Queue of audio files, can grow as needed
@@ -27,21 +27,15 @@ public class AudioQueue : MonoBehaviour
     */
     public void AudioPlay()
     {
-
         currentAudioSource = audio2Queue[index];
         if(!currentAudioSource.isPlaying)
         {
             currentAudioSource.Play();
             index += 1;
         }
-
-
+        
         /*
-         * Queue Error Message: Object reference not set to an instance of an object
-AudioQueue.AudioPlay () (at Assets/Scripts/AudioQueue.cs:40)
-PlaySound.PlayAudio () (at Assets/Scripts/PlaySound.cs:46)
-PlaySound.OnTriggerEnter (UnityEngine.Collider other) (at Assets/Scripts/PlaySound.cs:36)
-
+         * This is for a queue. If the current audio source is NOT playing, then get the next source to play which is found in RemoveAudioSourceToPlay();
          if(!currentAudioSource.isPlaying)
          {
              RemoveAudioSourceToPlay();
@@ -50,8 +44,8 @@ PlaySound.OnTriggerEnter (UnityEngine.Collider other) (at Assets/Scripts/PlaySou
 
     }
 
-    /* This checks to see if there is audio in the queue
-     * 
+    /* 
+     * This checks to see if there is audio in the queue
      * */
     private bool hasAudioInQueue()
     {
@@ -67,14 +61,16 @@ PlaySound.OnTriggerEnter (UnityEngine.Collider other) (at Assets/Scripts/PlaySou
         return hasAudio;
     }
 
-    /*
+    /* This Dequeues the first source to then play it
+     * 
+     * */
+     /*
     public AudioSource RemoveAudioSourceToPlay()
     {
         currentAudioSource = audioQueue.Dequeue();
         return currentAudioSource;
     }
     */
-
 
     /*
      * This is to communicate with the PlayAudio script
@@ -97,6 +93,7 @@ PlaySound.OnTriggerEnter (UnityEngine.Collider other) (at Assets/Scripts/PlaySou
         }
     }
 
+    //Get the size of the queue
     public int getSize()
     {
         return audio2Queue.Count;

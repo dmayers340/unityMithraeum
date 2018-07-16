@@ -43,6 +43,6 @@ public class PlaySound : MonoBehaviour
         audioQueue.AddAudioSourceToList(audio);
         Debug.Log("Size of audio queue: " + audioQueue.getSize());
        // audio.Play();
-        audioQueue.AudioPlay();
+       // audioQueue.AudioPlay();
     }
 }
