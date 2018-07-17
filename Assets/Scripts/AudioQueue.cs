@@ -9,7 +9,9 @@ using UnityEngine;
  * */
 public class AudioQueue : MonoBehaviour
 {
-   // Queue<AudioSource> audioQueue = new Queue<AudioSource>();
+    Queue<AudioClip> audioClipQueue = new Queue<AudioClip>();
+
+   //Queue<AudioSource> audioQueue = new Queue<AudioSource>();
 
     //Changed to list
     List<AudioSource> audio2Queue = new List<AudioSource>(); //Queue of audio files, can grow as needed
@@ -94,6 +96,18 @@ public class AudioQueue : MonoBehaviour
             Debug.Log("Cannot add audio, no source found");
         }
     }
+
+    public void AddClip(AudioClip clip)
+    {
+        audioClipQueue.Enqueue(clip);
+    }
+
+    public AudioClip GetClip()
+    {
+        return audioClipQueue.Dequeue();
+    }
+
+
 
     //Get the size of the queue
     public int getSize()
