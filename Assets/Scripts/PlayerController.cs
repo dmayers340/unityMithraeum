@@ -4,9 +4,10 @@ using UnityEngine;
 
 /*
  * After many problems with the audio queue, it was decided to instead make a player controller
- * This script is attached to the player torch (because it has a rigid body attached)
- * When the player enters a sound zone and they have not entered it before, the audio will play
- * The player will be restricted  to the zone until audio finishes playing
+ * This script is attached to the sound zone
+ * When the player enters a sound zone (rather, the torch which is a rigid body) and they have not entered it before, the audio will play
+ * The player will be restricted  to the zone until audio finishes playing by enabling four colliders to make a box
+ * Once the audio finishes playing, then the colliders will be disabled and the player can continue
  * */
 public class PlayerController : MonoBehaviour
 {
@@ -51,21 +52,19 @@ public class PlayerController : MonoBehaviour
             {
                 hasEnteredZone = true;
                 zoneAudio.Play();
-                Debug.Log("played audio");
-                if(zoneAudio.isPlaying == true)
-                {
-                    boundaryCollider1.enabled = true;
-                    boundaryCollider2.enabled = true;
-                    boundaryCollider3.enabled = true;
-                    boundaryCollider4.enabled = true;
-                }
-                else
+                boundaryCollider1.enabled = true;
+                boundaryCollider2.enabled = true;
+                boundaryCollider3.enabled = true;
+                boundaryCollider4.enabled = true;
+
+                if(zoneAudio.isPlaying == false)
                 {
                     boundaryCollider1.enabled = false;
                     boundaryCollider2.enabled = false;
                     boundaryCollider3.enabled = false;
                     boundaryCollider4.enabled = false;
                 }
+                
         
             }
 
