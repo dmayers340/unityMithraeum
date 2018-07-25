@@ -12,9 +12,33 @@ public class PlayerController : MonoBehaviour
 {
     AudioSource zoneAudio;
     bool hasEnteredZone = false;
-    Collider boundaryCollider;
-    public GameObject boundaryObj;
+    Collider boundaryCollider1;
+    Collider boundaryCollider2;
+    Collider boundaryCollider3;
+    Collider boundaryCollider4;
 
+
+    public GameObject boundaryObj1;
+    public GameObject boundaryObj2;
+    public GameObject boundaryObj3;
+    public GameObject boundaryObj4;
+
+    private void Start()
+    {
+        {
+            boundaryCollider1 = boundaryObj1.GetComponent<Collider>();
+            boundaryCollider1.enabled = false;
+
+            boundaryCollider2 = boundaryObj2.GetComponent<Collider>();
+            boundaryCollider2.enabled = false;
+
+            boundaryCollider3 = boundaryObj3.GetComponent<Collider>();
+            boundaryCollider3.enabled = false;
+
+            boundaryCollider4 = boundaryObj4.GetComponent<Collider>();
+            boundaryCollider4.enabled = false;
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         //if enter zone and have not entered it before
@@ -22,22 +46,29 @@ public class PlayerController : MonoBehaviour
         {
             //get the audio from the zone and the zone's collider
             zoneAudio = GetComponent<AudioSource>();
-            boundaryCollider = boundaryObj.GetComponent<Collider>();
-
             //if no audio is playing, play that audio and mark the zone as having been entered
             if(!zoneAudio.isPlaying && hasEnteredZone == false)
             {
+                hasEnteredZone = true;
                 zoneAudio.Play();
                 Debug.Log("played audio");
-                hasEnteredZone = true;
+                if(zoneAudio.isPlaying == true)
+                {
+                    boundaryCollider1.enabled = true;
+                    boundaryCollider2.enabled = true;
+                    boundaryCollider3.enabled = true;
+                    boundaryCollider4.enabled = true;
+                }
+                else
+                {
+                    boundaryCollider1.enabled = false;
+                    boundaryCollider2.enabled = false;
+                    boundaryCollider3.enabled = false;
+                    boundaryCollider4.enabled = false;
+                }
+        
+            }
 
-                boundaryCollider.enabled = true;
-            }
-            //otherwise, this means audio is playing and need to restrict player access to the zone by turning on the boundary collider
-            else 
-            {
-                boundaryCollider.enabled = false;
-            }
         }
     }
 }

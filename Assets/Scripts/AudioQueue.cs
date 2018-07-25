@@ -11,7 +11,7 @@ public class AudioQueue : MonoBehaviour
 {
     Queue<AudioClip> audioClipQueue = new Queue<AudioClip>();
 
-   //Queue<AudioSource> audioQueue = new Queue<AudioSource>();
+   Queue<AudioSource> audioQueue = new Queue<AudioSource>();
 
     //Changed to list
     List<AudioSource> audio2Queue = new List<AudioSource>(); //Queue of audio files, can grow as needed
@@ -30,6 +30,7 @@ public class AudioQueue : MonoBehaviour
     */
     public void AudioPlay()
     {
+    
         currentAudioSource = audio2Queue[index];
         if(!currentAudioSource.isPlaying)
         {

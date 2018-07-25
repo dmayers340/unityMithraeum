@@ -37,11 +37,11 @@ public class ArduinoScent : MonoBehaviour
             
         }
 
-        /*
+        
         string value = connection.ReadLine();
         buttonState = int.Parse(value);
    
-    */
+    
     }
 
     void printOut()

@@ -23,15 +23,17 @@ void setup()
 //https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/
 void loop() 
 {
+  //Just to test the connection to Unity
    testing = testing + 1;
-   if(testing == 10)
+   if(testing == 1000)
    {
       testing = 0;
    }
-
-   Serial.println(testing);
    delay(1000);
-   
+   Serial.println(testing);
+    //End connection to Unity
+    
+   //Turn on fanPin to turn fan on
    // digitalWrite(fanConnectionPin, HIGH);
     digitalWrite(LED_BUILTIN, HIGH);
     delay(1000);    
