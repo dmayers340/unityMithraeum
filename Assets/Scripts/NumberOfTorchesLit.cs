@@ -11,8 +11,6 @@ public class NumberOfTorchesLit : MonoBehaviour
     PlayerCollideWithTorch torchScript;
     EndExperience endScript;
 
-    bool hasBeenLit = false;
-
     //Get the torch script
     void Start()
     {

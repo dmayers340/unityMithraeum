@@ -16,6 +16,7 @@ public class GameManagement : MonoBehaviour
     Distance distanceScript;
     NumberGrabbedObjects grabbedScript;
     EndExperience endGame;
+    NumberOfTorchesLit torchLit;
 
     public GameObject endGameObject;
     public GameObject gameManagement;
@@ -27,6 +28,7 @@ public class GameManagement : MonoBehaviour
         distanceScript = gameManagement.GetComponent<Distance>();
         grabbedScript = gameManagement.GetComponent<NumberGrabbedObjects>();
         endGame = endGameObject.GetComponent<EndExperience>();
+        torchLit = gameManagement.GetComponent<NumberOfTorchesLit>();
     }
 
     void OnApplicationQuit()

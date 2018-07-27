@@ -6,8 +6,9 @@ public class TestPlayersCOntrl : MonoBehaviour
 {
     AudioSource zoneAudio;
     bool hasEnteredZone = false;
-  
-    Collider[] colliders;
+    bool collidersAreOn;
+
+    private Collider[] colliders;
 
     public GameObject parent;
 
@@ -18,12 +19,26 @@ public class TestPlayersCOntrl : MonoBehaviour
         zoneAudio = GetComponent<AudioSource>();
 
         colliders = parent.GetComponentsInChildren<Collider>();
+
         foreach (Collider col in colliders)
         {
             col.enabled = false;
         }
 
     }
+
+    private void Update()
+    {
+        if (!zoneAudio.isPlaying && collidersAreOn == true)
+        {
+            foreach(Collider col in colliders)
+            {
+                col.enabled = false;
+            }
+            collidersAreOn = false;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         //if enter zone and have not entered it before

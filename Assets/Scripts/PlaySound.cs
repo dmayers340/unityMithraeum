@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
+ * This ended up not being used as the Queue did not work. Instead I turn on colliders
+ * 
  * Play sound when user enters certain zones script.
  * In a further rendition, the sound should actually be spatialized and placed on an audio source
  * i.e. the tauroctony or a 'god figure'

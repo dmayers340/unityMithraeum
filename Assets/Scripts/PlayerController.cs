@@ -8,6 +8,8 @@ using UnityEngine;
  * When the player enters a sound zone (rather, the torch which is a rigid body) and they have not entered it before, the audio will play
  * The player will be restricted  to the zone until audio finishes playing by enabling four colliders to make a box
  * Once the audio finishes playing, then the colliders will be disabled and the player can continue
+ * 
+ * I have tried to test this with an array of colliders inside the TestPlayerCOntrol script, but it is not working
  * */
 public class PlayerController : MonoBehaviour
 {
@@ -17,7 +19,6 @@ public class PlayerController : MonoBehaviour
     Collider boundaryCollider2;
     Collider boundaryCollider3;
     Collider boundaryCollider4;
-    Collider[] colliders;
 
     public GameObject boundaryObj1;
     public GameObject boundaryObj2;
