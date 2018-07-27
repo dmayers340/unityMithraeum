@@ -17,16 +17,21 @@ public class PlayerController : MonoBehaviour
     Collider boundaryCollider2;
     Collider boundaryCollider3;
     Collider boundaryCollider4;
-
+    Collider[] colliders;
 
     public GameObject boundaryObj1;
     public GameObject boundaryObj2;
     public GameObject boundaryObj3;
     public GameObject boundaryObj4;
 
+    bool collidersAreOn = false;
+
     private void Start()
     {
         {
+            //get the audio from the zone and the zone's collider
+            zoneAudio = GetComponent<AudioSource>();
+
             boundaryCollider1 = boundaryObj1.GetComponent<Collider>();
             boundaryCollider1.enabled = false;
 
@@ -38,36 +43,47 @@ public class PlayerController : MonoBehaviour
 
             boundaryCollider4 = boundaryObj4.GetComponent<Collider>();
             boundaryCollider4.enabled = false;
+            
+        }
+    }
+
+    private void Update()
+    {
+        if(!zoneAudio.isPlaying && collidersAreOn == true)
+        {
+            boundaryCollider1.enabled = false;
+            boundaryCollider2.enabled = false;
+            boundaryCollider3.enabled = false;
+            boundaryCollider4.enabled = false;
+            collidersAreOn = false;
         }
     }
     private void OnTriggerEnter(Collider other)
     {
         //if enter zone and have not entered it before
-        if(other.CompareTag("playertorch"))
+        if (other.CompareTag("playertorch"))
         {
-            //get the audio from the zone and the zone's collider
-            zoneAudio = GetComponent<AudioSource>();
             //if no audio is playing, play that audio and mark the zone as having been entered
-            if(!zoneAudio.isPlaying && hasEnteredZone == false)
+            if (!zoneAudio.isPlaying && hasEnteredZone == false)
             {
                 hasEnteredZone = true;
                 zoneAudio.Play();
-                boundaryCollider1.enabled = true;
-                boundaryCollider2.enabled = true;
-                boundaryCollider3.enabled = true;
-                boundaryCollider4.enabled = true;
-
-                if(zoneAudio.isPlaying == false)
-                {
-                    boundaryCollider1.enabled = false;
-                    boundaryCollider2.enabled = false;
-                    boundaryCollider3.enabled = false;
-                    boundaryCollider4.enabled = false;
+                if(zoneAudio.isPlaying)
+                { 
+                    boundaryCollider1.enabled = true;
+                    boundaryCollider2.enabled = true;
+                    boundaryCollider3.enabled = true;
+                    boundaryCollider4.enabled = true;
+                    collidersAreOn = true;
                 }
                 
-        
+
             }
+
+         
+
 
         }
     }
+
 }
