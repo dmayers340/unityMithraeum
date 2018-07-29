@@ -36,7 +36,7 @@ public class GameManagement : MonoBehaviour
         WriteToFile(grabbedScript.getGrabbedObjects().ToString());
         WriteToFile(distanceScript.getDistanceWalked().ToString());
         WriteToFile(timeScript.getTimeSpent().ToString());
-
+        
         Debug.Log("From Game Management Count of Grabbed Objects " + grabbedScript.getGrabbedObjects());
         Debug.Log("From Game Management Application Distance Walked: " + distanceScript.getDistanceWalked());
         Debug.Log("From Game Management Time Spent: " + timeScript.getTimeSpent());

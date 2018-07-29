@@ -37,8 +37,6 @@ public class PlayerCollideWithTorch : MonoBehaviour
 
             AudioSource audio = other.GetComponent<AudioSource>();
             audio.Play();
-
-          
           
         }
     }

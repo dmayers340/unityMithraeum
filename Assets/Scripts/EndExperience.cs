@@ -10,32 +10,43 @@ using UnityEngine;
  * */
 public class EndExperience : MonoBehaviour
 {
-    AudioSource audioSource;
+    AudioSource audioSource; //end of game clip
+
+    PlayerCollideWithTorch numTorchScript; //number of torches lit to play the sound
+    int numTorchesLit = 0;
 
     //Get All the Torches and their Particle Systems
     public GameObject torchLeftOne;
     ParticleSystem psOne;
+
     //Torch 2
     public GameObject torchLeftTwo;
     ParticleSystem psTwo;
+
     //Torch3
     public GameObject torchRightOne;
     ParticleSystem psThree;
+
     //Torch4
     public GameObject torchRightTwo;
     ParticleSystem psFour;
+
     //Torch5
     public GameObject playerTorch;
     ParticleSystem psFive;
+
     //Torch Six
     public GameObject apseTorchOne;
     ParticleSystem psSix;
+
     //Torch Seven
     public GameObject apseTorchTwo;
     ParticleSystem psSeven;
+
     //Torch Eight
     public GameObject doorTorchOne;
     ParticleSystem psEight;
+
     //Torch Nine
     public GameObject doorTorchTwo;
     ParticleSystem psNine;
@@ -43,6 +54,8 @@ public class EndExperience : MonoBehaviour
     //Get all the Particle Systems
 	void Start ()
     {
+        numTorchScript = playerTorch.GetComponent<PlayerCollideWithTorch>();
+
         psOne = torchLeftOne.GetComponent<ParticleSystem>();
         psTwo = torchLeftTwo.GetComponent<ParticleSystem>();
         psThree = torchRightOne.GetComponent<ParticleSystem>();
@@ -53,13 +66,27 @@ public class EndExperience : MonoBehaviour
         psEight = doorTorchOne.GetComponent<ParticleSystem>();
         psNine = doorTorchTwo.GetComponent<ParticleSystem>();
     }
-	
+
+    void Update()
+    {
+        numTorchesLit = numTorchScript.getNumTorchesLit();
+
+        if (numTorchesLit == 8)
+        {
+            PlayAudio();
+        }
+    }
+
     //Play the audio source to end the experience
     public void PlayAudio()
     {
         audioSource = GetComponent<AudioSource>();
         audioSource.Play();
+
+        StopLights();
     }
+       
+    
 
 	// Update is called once per frame
 	public void StopLights ()

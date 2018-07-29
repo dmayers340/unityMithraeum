@@ -15,17 +15,7 @@ public class NumberOfTorchesLit : MonoBehaviour
     void Start()
     {
         torchScript = playerTorch.GetComponent<PlayerCollideWithTorch>();
-        endScript = endExperience.GetComponent<EndExperience>();
-    }
-
-    void Update()
-    {
-        numTorchesLit = torchScript.getNumTorchesLit();
-        if(numTorchesLit == 8)
-        {
-            endScript.PlayAudio();
-            endScript.StopLights();
-        }
+        this.numTorchesLit = torchScript.getNumTorchesLit();
     }
 
     //Get the number of torches lit
