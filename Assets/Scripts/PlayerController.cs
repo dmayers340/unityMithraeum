@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if(!zoneAudio.isPlaying && collidersAreOn == true)
+        if(!zoneAudio.isPlaying && collidersAreOn )
         {
             boundaryCollider1.enabled = false;
             boundaryCollider2.enabled = false;
@@ -59,13 +59,14 @@ public class PlayerController : MonoBehaviour
             collidersAreOn = false;
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
         //if enter zone and have not entered it before
         if (other.CompareTag("playertorch"))
         {
             //if no audio is playing, play that audio and mark the zone as having been entered
-            if (!zoneAudio.isPlaying && hasEnteredZone == false)
+            if (hasEnteredZone == false)
             {
                 hasEnteredZone = true;
                 zoneAudio.Play();
@@ -77,13 +78,7 @@ public class PlayerController : MonoBehaviour
                     boundaryCollider4.enabled = true;
                     collidersAreOn = true;
                 }
-                
-
             }
-
-         
-
-
         }
     }
 

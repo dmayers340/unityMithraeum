@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,8 +13,7 @@ public class EndExperience : MonoBehaviour
 {
     AudioSource audioSource; //end of game clip
 
-    PlayerCollideWithTorch numTorchScript; //number of torches lit to play the sound
-    int numTorchesLit = 0;
+    GameObject audio;
 
     //Get All the Torches and their Particle Systems
     public GameObject torchLeftOne;
@@ -49,12 +49,18 @@ public class EndExperience : MonoBehaviour
 
     //Torch Nine
     public GameObject doorTorchTwo;
+
+    internal void PlayAudio()
+    {
+        throw new NotImplementedException();
+    }
+
     ParticleSystem psNine;
     
     //Get all the Particle Systems
 	void Start ()
     {
-        numTorchScript = playerTorch.GetComponent<PlayerCollideWithTorch>();
+        audioSource = audio.GetComponent<AudioSource>();
 
         psOne = torchLeftOne.GetComponent<ParticleSystem>();
         psTwo = torchLeftTwo.GetComponent<ParticleSystem>();
@@ -67,40 +73,30 @@ public class EndExperience : MonoBehaviour
         psNine = doorTorchTwo.GetComponent<ParticleSystem>();
     }
 
-    void Update()
-    {
-        numTorchesLit = numTorchScript.getNumTorchesLit();
 
-        if (numTorchesLit == 8)
+    public void EndGame()
+    {
+        if(Input.GetMouseButtonDown(0))
         {
-            PlayAudio();
+            audioSource.Play();
+
+            if (!audioSource.isPlaying)
+            {
+                psOne.Stop();
+                psTwo.Stop();
+                psThree.Stop();
+                psFour.Stop();
+                psFive.Stop();
+                psSix.Stop();
+                psSeven.Stop();
+                psEight.Stop();
+                psNine.Stop();
+            }
+        }
+        else if(Input.GetKey("escape"))
+        {
+            Application.Quit();
         }
     }
 
-    //Play the audio source to end the experience
-    public void PlayAudio()
-    {
-        audioSource = GetComponent<AudioSource>();
-        audioSource.Play();
-
-        StopLights();
-    }
-       
-    
-
-	// Update is called once per frame
-	public void StopLights ()
-    {
-   
-        psOne.Stop();
-        psTwo.Stop();
-        psThree.Stop();
-        psFour.Stop();
-        psFive.Stop();
-        psSix.Stop();
-        psSeven.Stop();
-        psEight.Stop();
-        psNine.Stop();
-   
-	}
 }

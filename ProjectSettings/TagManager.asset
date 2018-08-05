@@ -10,16 +10,8 @@ TagManager:
   - environment
   - management
   - hand
-  - zoneB
-  - zoneA
-  - zoneC
-  - zoneD
-  - zoneE
-  - zoneF
-  - zoneG
-  - zoneH
-  - zoneI
   - entered
+  - zoneCollider
   layers:
   - Default
   - TransparentFX

@@ -16,16 +16,28 @@ public class PlayerCollideWithTorch : MonoBehaviour
 {
     int numTorchesLit;
     bool torchLit = false;
+    bool hasCounted = false;
+
+    public GameObject endObj;
+    EndExperience end; //reference endexperience script
 
     private void Start()
     {
         numTorchesLit = 0;
+        end = endObj.GetComponent<EndExperience>();
     }
 
+    public void Update()
+    {
+        if(numTorchesLit == 8)
+        {
+            end.EndGame();
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         //If player collides with torch
-        if (other.CompareTag("torch") && torchLit == false) 
+        if (other.CompareTag("torch"))
         {
             //Get particle system
             ParticleSystem ps = other.GetComponent<ParticleSystem>();
@@ -33,16 +45,22 @@ public class PlayerCollideWithTorch : MonoBehaviour
             //Play particle system and audio on light
             ps.Play();
             torchLit = true;
-            numTorchesLit += 1;
 
             AudioSource audio = other.GetComponent<AudioSource>();
             audio.Play();
-          
         }
-    }
+        else if(other.CompareTag("zoneCollider") && hasCounted == false)
+        {
+            numTorchesLit += 1;
+            hasCounted = true;
+        }
 
+    }
+        
     public int getNumTorchesLit()
     {
+        Debug.Log("Torches lit =  " + numTorchesLit);
+
         return numTorchesLit;
     }
 }
